@@ -22,7 +22,12 @@
 
 + (void)initialize
 {
+    UITabBarItem *appearance = [UITabBarItem appearance];
+    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
+    attrs[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
+    [appearance setTitleTextAttributes:attrs forState:UIControlStateSelected];
     
+    [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"tabbar-light"]];
 }
 
 - (void)viewDidLoad {
