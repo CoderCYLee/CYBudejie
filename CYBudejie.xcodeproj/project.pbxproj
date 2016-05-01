@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E797CFB61CD62B1E0089F3EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E797CFB51CD62B1E0089F3EB /* main.m */; };
-		E797CFB91CD62B1E0089F3EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E797CFB81CD62B1E0089F3EB /* AppDelegate.m */; };
-		E797CFBC1CD62B1E0089F3EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E797CFBB1CD62B1E0089F3EB /* ViewController.m */; };
 		E797CFC11CD62B1E0089F3EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E797CFC01CD62B1E0089F3EB /* Assets.xcassets */; };
 		E797CFCF1CD62B1E0089F3EB /* CYBudejieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E797CFCE1CD62B1E0089F3EB /* CYBudejieUITests.m */; };
+		E797CFF41CD634970089F3EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E797CFF11CD634970089F3EB /* AppDelegate.m */; };
+		E797CFF51CD634970089F3EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E797CFF21CD634970089F3EB /* main.m */; };
+		E797CFF81CD6350C0089F3EB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E797CFF71CD6350C0089F3EB /* MainViewController.m */; };
+		E797CFFB1CD636340089F3EB /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E797CFFA1CD636340089F3EB /* NavigationViewController.m */; };
+		E797CFFE1CD637180089F3EB /* EssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E797CFFD1CD637180089F3EB /* EssenceViewController.m */; };
+		E797D0011CD637440089F3EB /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E797D0001CD637440089F3EB /* NewViewController.m */; };
+		E797D0041CD637660089F3EB /* FriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E797D0031CD637660089F3EB /* FriendTrendsViewController.m */; };
+		E797D0071CD6377A0089F3EB /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E797D0061CD6377A0089F3EB /* MeViewController.m */; };
+		E797D00D1CD63B5A0089F3EB /* UIBarButtonItem+CYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E797D00C1CD63B5A0089F3EB /* UIBarButtonItem+CYExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +32,29 @@
 
 /* Begin PBXFileReference section */
 		E797CFB11CD62B1E0089F3EB /* CYBudejie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CYBudejie.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E797CFB51CD62B1E0089F3EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E797CFB71CD62B1E0089F3EB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E797CFB81CD62B1E0089F3EB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E797CFBA1CD62B1E0089F3EB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E797CFBB1CD62B1E0089F3EB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E797CFC01CD62B1E0089F3EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E797CFC51CD62B1E0089F3EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E797CFCA1CD62B1E0089F3EB /* CYBudejieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CYBudejieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E797CFCE1CD62B1E0089F3EB /* CYBudejieUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYBudejieUITests.m; sourceTree = "<group>"; };
 		E797CFD01CD62B1E0089F3EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E797CFF01CD634970089F3EB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E797CFF11CD634970089F3EB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E797CFF21CD634970089F3EB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E797CFF31CD634970089F3EB /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		E797CFF61CD6350C0089F3EB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		E797CFF71CD6350C0089F3EB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		E797CFF91CD636340089F3EB /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		E797CFFA1CD636340089F3EB /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		E797CFFC1CD637180089F3EB /* EssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EssenceViewController.h; sourceTree = "<group>"; };
+		E797CFFD1CD637180089F3EB /* EssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EssenceViewController.m; sourceTree = "<group>"; };
+		E797CFFF1CD637440089F3EB /* NewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
+		E797D0001CD637440089F3EB /* NewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
+		E797D0021CD637660089F3EB /* FriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendTrendsViewController.h; sourceTree = "<group>"; };
+		E797D0031CD637660089F3EB /* FriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendTrendsViewController.m; sourceTree = "<group>"; };
+		E797D0051CD6377A0089F3EB /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
+		E797D0061CD6377A0089F3EB /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
+		E797D00B1CD63B5A0089F3EB /* UIBarButtonItem+CYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+CYExtension.h"; sourceTree = "<group>"; };
+		E797D00C1CD63B5A0089F3EB /* UIBarButtonItem+CYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+CYExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +96,7 @@
 		E797CFB31CD62B1E0089F3EB /* CYBudejie */ = {
 			isa = PBXGroup;
 			children = (
-				E797CFB71CD62B1E0089F3EB /* AppDelegate.h */,
-				E797CFB81CD62B1E0089F3EB /* AppDelegate.m */,
-				E797CFBA1CD62B1E0089F3EB /* ViewController.h */,
-				E797CFBB1CD62B1E0089F3EB /* ViewController.m */,
+				E797CFDA1CD634970089F3EB /* Classes */,
 				E797CFB41CD62B1E0089F3EB /* Supporting Files */,
 			);
 			path = CYBudejie;
@@ -91,7 +107,6 @@
 			children = (
 				E797CFC01CD62B1E0089F3EB /* Assets.xcassets */,
 				E797CFC51CD62B1E0089F3EB /* Info.plist */,
-				E797CFB51CD62B1E0089F3EB /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -103,6 +118,199 @@
 				E797CFD01CD62B1E0089F3EB /* Info.plist */,
 			);
 			path = CYBudejieUITests;
+			sourceTree = "<group>";
+		};
+		E797CFDA1CD634970089F3EB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E797CFDB1CD634970089F3EB /* Essence */,
+				E797CFE01CD634970089F3EB /* FriendTrends */,
+				E797CFE51CD634970089F3EB /* Main */,
+				E797CFEB1CD634970089F3EB /* Me */,
+				E797CFED1CD634970089F3EB /* New */,
+				E797CFEF1CD634970089F3EB /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E797CFDB1CD634970089F3EB /* Essence */ = {
+			isa = PBXGroup;
+			children = (
+				E797CFDC1CD634970089F3EB /* Controller */,
+				E797CFDD1CD634970089F3EB /* Model */,
+				E797CFDE1CD634970089F3EB /* Tool */,
+				E797CFDF1CD634970089F3EB /* View */,
+			);
+			path = Essence;
+			sourceTree = "<group>";
+		};
+		E797CFDC1CD634970089F3EB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E797CFFC1CD637180089F3EB /* EssenceViewController.h */,
+				E797CFFD1CD637180089F3EB /* EssenceViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E797CFDD1CD634970089F3EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E797CFDE1CD634970089F3EB /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		E797CFDF1CD634970089F3EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E797CFE01CD634970089F3EB /* FriendTrends */ = {
+			isa = PBXGroup;
+			children = (
+				E797CFE11CD634970089F3EB /* Controller */,
+				E797CFE21CD634970089F3EB /* Model */,
+				E797CFE31CD634970089F3EB /* Tool */,
+				E797CFE41CD634970089F3EB /* View */,
+			);
+			path = FriendTrends;
+			sourceTree = "<group>";
+		};
+		E797CFE11CD634970089F3EB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E797D0021CD637660089F3EB /* FriendTrendsViewController.h */,
+				E797D0031CD637660089F3EB /* FriendTrendsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E797CFE21CD634970089F3EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E797CFE31CD634970089F3EB /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		E797CFE41CD634970089F3EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E797CFE51CD634970089F3EB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E797CFE61CD634970089F3EB /* Category */,
+				E797CFE71CD634970089F3EB /* Controller */,
+				E797CFE81CD634970089F3EB /* Model */,
+				E797CFE91CD634970089F3EB /* Tool */,
+				E797CFEA1CD634970089F3EB /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E797CFE61CD634970089F3EB /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E797D00B1CD63B5A0089F3EB /* UIBarButtonItem+CYExtension.h */,
+				E797D00C1CD63B5A0089F3EB /* UIBarButtonItem+CYExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		E797CFE71CD634970089F3EB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E797CFF61CD6350C0089F3EB /* MainViewController.h */,
+				E797CFF71CD6350C0089F3EB /* MainViewController.m */,
+				E797CFF91CD636340089F3EB /* NavigationViewController.h */,
+				E797CFFA1CD636340089F3EB /* NavigationViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E797CFE81CD634970089F3EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E797CFE91CD634970089F3EB /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		E797CFEA1CD634970089F3EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E797CFEB1CD634970089F3EB /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				E797CFEC1CD634970089F3EB /* Controller */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		E797CFEC1CD634970089F3EB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E797D0051CD6377A0089F3EB /* MeViewController.h */,
+				E797D0061CD6377A0089F3EB /* MeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E797CFED1CD634970089F3EB /* New */ = {
+			isa = PBXGroup;
+			children = (
+				E797CFEE1CD634970089F3EB /* Controller */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		E797CFEE1CD634970089F3EB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E797CFFF1CD637440089F3EB /* NewViewController.h */,
+				E797D0001CD637440089F3EB /* NewViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E797CFEF1CD634970089F3EB /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E797CFF01CD634970089F3EB /* AppDelegate.h */,
+				E797CFF11CD634970089F3EB /* AppDelegate.m */,
+				E797CFF21CD634970089F3EB /* main.m */,
+				E797CFF31CD634970089F3EB /* PrefixHeader.pch */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,9 +411,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E797CFBC1CD62B1E0089F3EB /* ViewController.m in Sources */,
-				E797CFB91CD62B1E0089F3EB /* AppDelegate.m in Sources */,
-				E797CFB61CD62B1E0089F3EB /* main.m in Sources */,
+				E797D0041CD637660089F3EB /* FriendTrendsViewController.m in Sources */,
+				E797CFFB1CD636340089F3EB /* NavigationViewController.m in Sources */,
+				E797CFF51CD634970089F3EB /* main.m in Sources */,
+				E797CFF81CD6350C0089F3EB /* MainViewController.m in Sources */,
+				E797D0011CD637440089F3EB /* NewViewController.m in Sources */,
+				E797CFFE1CD637180089F3EB /* EssenceViewController.m in Sources */,
+				E797D0071CD6377A0089F3EB /* MeViewController.m in Sources */,
+				E797D00D1CD63B5A0089F3EB /* UIBarButtonItem+CYExtension.m in Sources */,
+				E797CFF41CD634970089F3EB /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +529,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/cyrill/Documents/MyGithub/CYBudejie/CYBudejie/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = CYBudejie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Futurestar.CYBudejie;
@@ -327,6 +543,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/cyrill/Documents/MyGithub/CYBudejie/CYBudejie/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = CYBudejie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Futurestar.CYBudejie;
@@ -375,6 +593,7 @@
 				E797CFD51CD62B1E0089F3EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E797CFD61CD62B1E0089F3EB /* Build configuration list for PBXNativeTarget "CYBudejieUITests" */ = {
 			isa = XCConfigurationList;
@@ -383,6 +602,7 @@
 				E797CFD81CD62B1E0089F3EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
