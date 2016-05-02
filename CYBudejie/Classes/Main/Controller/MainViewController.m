@@ -14,6 +14,8 @@
 #import "FriendTrendsViewController.h"
 #import "MeViewController.h"
 
+#import "TabBar.h"
+
 @interface MainViewController ()
 
 @end
@@ -33,6 +35,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // KVC
+    [self setValue:[[TabBar alloc] init] forKeyPath:@"tabBar"];
     
     // 初始化所有的子控制器
     [self setupChildViewControllers];
