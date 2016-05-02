@@ -10,7 +10,6 @@
 #import "MJRefreshComponent.h"
 #import "MJRefreshConst.h"
 #import "UIView+MJExtension.h"
-#import "UIScrollView+MJRefresh.h"
 
 @interface MJRefreshComponent()
 @property (strong, nonatomic) UIPanGestureRecognizer *pan;
@@ -67,7 +66,7 @@
         // 设置永远支持垂直弹簧效果
         _scrollView.alwaysBounceVertical = YES;
         // 记录UIScrollView最开始的contentInset
-        _scrollViewOriginalInset = _scrollView.contentInset;
+        _scrollViewOriginalInset = self.scrollView.contentInset;
         
         // 添加监听
         [self addObservers];
@@ -105,17 +104,14 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     // 遇到这些情况就直接返回
-    if (!self.userInteractionEnabled) return;
+    if (!self.userInteractionEnabled || self.hidden) return;
     
-    // 这个就算看不见也需要处理
-    if ([keyPath isEqualToString:MJRefreshKeyPathContentSize]) {
-        [self scrollViewContentSizeDidChange:change];
-    }
-    
-    // 看不见
-    if (self.hidden) return;
     if ([keyPath isEqualToString:MJRefreshKeyPathContentOffset]) {
         [self scrollViewContentOffsetDidChange:change];
+    } else if ([keyPath isEqualToString:MJRefreshKeyPathContentSize]) {
+        [self scrollViewContentSizeDidChange:change];
+    } else if ([keyPath isEqualToString:MJRefreshKeyPathContentInset]) {
+        [self scrollViewContentInsetDidChange:change];
     } else if ([keyPath isEqualToString:MJRefreshKeyPathPanState]) {
         [self scrollViewPanStateDidChange:change];
     }
@@ -123,6 +119,7 @@
 
 - (void)scrollViewContentOffsetDidChange:(NSDictionary *)change{}
 - (void)scrollViewContentSizeDidChange:(NSDictionary *)change{}
+- (void)scrollViewContentInsetDidChange:(NSDictionary *)change{}
 - (void)scrollViewPanStateDidChange:(NSDictionary *)change{}
 
 #pragma mark - 公共方法
@@ -165,22 +162,12 @@
 #pragma mark 自动切换透明度
 - (void)setAutoChangeAlpha:(BOOL)autoChangeAlpha
 {
-    self.automaticallyChangeAlpha = autoChangeAlpha;
-}
-
-- (BOOL)isAutoChangeAlpha
-{
-    return self.isAutomaticallyChangeAlpha;
-}
-
-- (void)setAutomaticallyChangeAlpha:(BOOL)automaticallyChangeAlpha
-{
-    _automaticallyChangeAlpha = automaticallyChangeAlpha;
+    _autoChangeAlpha = autoChangeAlpha;
     
     if (self.isRefreshing) return;
     
-    if (automaticallyChangeAlpha) {
-        self.alpha = self.pullingPercent;
+    if (autoChangeAlpha) {
+         self.alpha = self.pullingPercent;
     } else {
         self.alpha = 1.0;
     }
@@ -193,7 +180,7 @@
     
     if (self.isRefreshing) return;
     
-    if (self.isAutomaticallyChangeAlpha) {
+    if (self.isAutoChangeAlpha) {
         self.alpha = pullingPercent;
     }
 }
@@ -206,7 +193,7 @@
             self.refreshingBlock();
         }
         if ([self.refreshingTarget respondsToSelector:self.refreshingAction]) {
-            MJRefreshMsgSend(MJRefreshMsgTarget(self.refreshingTarget), self.refreshingAction, self);
+            msgSend(msgTarget(self.refreshingTarget), self.refreshingAction, self);
         }
     });
 }

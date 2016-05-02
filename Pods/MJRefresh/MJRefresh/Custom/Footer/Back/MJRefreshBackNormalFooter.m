@@ -10,7 +10,7 @@
 
 @interface MJRefreshBackNormalFooter()
 {
-    __unsafe_unretained UIImageView *_arrowView;
+    __weak UIImageView *_arrowView;
 }
 @property (weak, nonatomic) UIActivityIndicatorView *loadingView;
 @end
@@ -20,61 +20,37 @@
 - (UIImageView *)arrowView
 {
     if (!_arrowView) {
-        UIImage *image = [UIImage imageNamed:MJRefreshSrcName(@"arrow.png")] ?: [UIImage imageNamed:MJRefreshFrameworkSrcName(@"arrow.png")];
-        UIImageView *arrowView = [[UIImageView alloc] initWithImage:image];
+        UIImageView *arrowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:MJRefreshSrcName(@"arrow.png")]];
         [self addSubview:_arrowView = arrowView];
     }
     return _arrowView;
 }
 
-
 - (UIActivityIndicatorView *)loadingView
 {
     if (!_loadingView) {
-        UIActivityIndicatorView *loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:self.activityIndicatorViewStyle];
+        UIActivityIndicatorView *loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         loadingView.hidesWhenStopped = YES;
         [self addSubview:_loadingView = loadingView];
     }
     return _loadingView;
 }
-
-- (void)setActivityIndicatorViewStyle:(UIActivityIndicatorViewStyle)activityIndicatorViewStyle
-{
-    _activityIndicatorViewStyle = activityIndicatorViewStyle;
-    
-    self.loadingView = nil;
-    [self setNeedsLayout];
-}
 #pragma makr - 重写父类的方法
-- (void)prepare
-{
-    [super prepare];
-    
-    self.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
-}
-
 - (void)placeSubviews
 {
     [super placeSubviews];
     
-    // 箭头的中心点
+    // 箭头
+    self.arrowView.mj_size = self.arrowView.image.size;
     CGFloat arrowCenterX = self.mj_w * 0.5;
     if (!self.stateLabel.hidden) {
         arrowCenterX -= 100;
     }
     CGFloat arrowCenterY = self.mj_h * 0.5;
-    CGPoint arrowCenter = CGPointMake(arrowCenterX, arrowCenterY);
-    
-    // 箭头
-    if (self.arrowView.constraints.count == 0) {
-        self.arrowView.mj_size = self.arrowView.image.size;
-        self.arrowView.center = arrowCenter;
-    }
+    self.arrowView.center = CGPointMake(arrowCenterX, arrowCenterY);
     
     // 圈圈
-    if (self.loadingView.constraints.count == 0) {
-        self.loadingView.center = arrowCenter;
-    }
+    self.loadingView.frame = self.arrowView.frame;
 }
 
 - (void)setState:(MJRefreshState)state
