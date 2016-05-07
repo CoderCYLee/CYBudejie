@@ -22,6 +22,11 @@
 		E797D0101CD651C60089F3EB /* TabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E797D00F1CD651C60089F3EB /* TabBar.m */; };
 		E797D0131CD6535F0089F3EB /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E797D0121CD6535F0089F3EB /* UIView+Extension.m */; };
 		E797D0161CD6F3120089F3EB /* CYHTTPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E797D0151CD6F3120089F3EB /* CYHTTPTool.m */; };
+		E7A192401CD6F9C2003DE880 /* FriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A1923F1CD6F9C2003DE880 /* FriendTrendsViewController.xib */; };
+		E7A192441CD6FBC4003DE880 /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A192421CD6FBC4003DE880 /* RecommendViewController.m */; };
+		E7A192451CD6FBC4003DE880 /* RecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A192431CD6FBC4003DE880 /* RecommendViewController.xib */; };
+		E7A192481CD6FE0C003DE880 /* RecommendTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A192471CD6FE0C003DE880 /* RecommendTool.m */; };
+		E7A193701CD7BBEA003DE880 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A1936F1CD7BBEA003DE880 /* SettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,14 @@
 		E797D0121CD6535F0089F3EB /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		E797D0141CD6F3120089F3EB /* CYHTTPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYHTTPTool.h; sourceTree = "<group>"; };
 		E797D0151CD6F3120089F3EB /* CYHTTPTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYHTTPTool.m; sourceTree = "<group>"; };
+		E7A1923F1CD6F9C2003DE880 /* FriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendTrendsViewController.xib; sourceTree = "<group>"; };
+		E7A192411CD6FBC4003DE880 /* RecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
+		E7A192421CD6FBC4003DE880 /* RecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
+		E7A192431CD6FBC4003DE880 /* RecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendViewController.xib; sourceTree = "<group>"; };
+		E7A192461CD6FE0C003DE880 /* RecommendTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendTool.h; sourceTree = "<group>"; };
+		E7A192471CD6FE0C003DE880 /* RecommendTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendTool.m; sourceTree = "<group>"; };
+		E7A1936E1CD7BBEA003DE880 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		E7A1936F1CD7BBEA003DE880 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		FF22A4B4FDFB3D42250147F3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,6 +236,10 @@
 			children = (
 				E797D0021CD637660089F3EB /* FriendTrendsViewController.h */,
 				E797D0031CD637660089F3EB /* FriendTrendsViewController.m */,
+				E7A1923F1CD6F9C2003DE880 /* FriendTrendsViewController.xib */,
+				E7A192411CD6FBC4003DE880 /* RecommendViewController.h */,
+				E7A192421CD6FBC4003DE880 /* RecommendViewController.m */,
+				E7A192431CD6FBC4003DE880 /* RecommendViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -237,6 +254,8 @@
 		E797CFE31CD634970089F3EB /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				E7A192461CD6FE0C003DE880 /* RecommendTool.h */,
+				E7A192471CD6FE0C003DE880 /* RecommendTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -320,6 +339,8 @@
 			children = (
 				E797D0051CD6377A0089F3EB /* MeViewController.h */,
 				E797D0061CD6377A0089F3EB /* MeViewController.m */,
+				E7A1936E1CD7BBEA003DE880 /* SettingViewController.h */,
+				E7A1936F1CD7BBEA003DE880 /* SettingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -435,7 +456,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7A192401CD6F9C2003DE880 /* FriendTrendsViewController.xib in Resources */,
 				E797CFC11CD62B1E0089F3EB /* Assets.xcassets in Resources */,
+				E7A192451CD6FBC4003DE880 /* RecommendViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,7 +528,9 @@
 				E797CFFB1CD636340089F3EB /* NavigationViewController.m in Sources */,
 				E797D0131CD6535F0089F3EB /* UIView+Extension.m in Sources */,
 				E797CFF51CD634970089F3EB /* main.m in Sources */,
+				E7A192481CD6FE0C003DE880 /* RecommendTool.m in Sources */,
 				E797CFF81CD6350C0089F3EB /* MainViewController.m in Sources */,
+				E7A192441CD6FBC4003DE880 /* RecommendViewController.m in Sources */,
 				E797D0161CD6F3120089F3EB /* CYHTTPTool.m in Sources */,
 				E797D0011CD637440089F3EB /* NewViewController.m in Sources */,
 				E797D0101CD651C60089F3EB /* TabBar.m in Sources */,
@@ -513,6 +538,7 @@
 				E797D0071CD6377A0089F3EB /* MeViewController.m in Sources */,
 				E797D00D1CD63B5A0089F3EB /* UIBarButtonItem+CYExtension.m in Sources */,
 				E797CFF41CD634970089F3EB /* AppDelegate.m in Sources */,
+				E7A193701CD7BBEA003DE880 /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

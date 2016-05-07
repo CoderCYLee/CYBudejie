@@ -7,6 +7,7 @@
 //
 
 #import "FriendTrendsViewController.h"
+#import "RecommendViewController.h"
 
 @interface FriendTrendsViewController ()
 
@@ -37,7 +38,8 @@
 
 - (void)following
 {
-    
+    RecommendViewController *vc = [[RecommendViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
