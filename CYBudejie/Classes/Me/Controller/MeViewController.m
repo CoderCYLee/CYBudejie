@@ -3,10 +3,12 @@
 //  CYBudejie
 //
 //  Created by Cyrill on 16/5/1.
-//  Copyright © 2016年 Cyrill. All rights reserved.
+//  Copyright © 2016 Cyrill. All rights reserved.
 //
 
 #import "MeViewController.h"
+
+#import "SettingViewController.h"
 
 @interface MeViewController ()
 
@@ -18,7 +20,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = CYGlobalColor;
-    [self setupNavBar];
+    [self setupNav];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,23 +29,26 @@
 }
 
 #pragma mark - private methods
-- (void)setupNavBar
+- (void)setupNav
 {
+    // 设置导航栏标题
     self.navigationItem.title = @"我的";
-    self.navigationItem.rightBarButtonItems = @[
-                                                [UIBarButtonItem itemWithImage:@"mine-setting-icon" highImage:@"mine-setting-icon-click" target:self action:@selector(setting)],
-                                                [UIBarButtonItem itemWithImage:@"mine-moon-icon" highImage:@"mine-moon-icon-click" target:self action:@selector(moon)]
-                                                ];
+    
+    // 设置导航栏右边的按钮
+    UIBarButtonItem *settingItem = [UIBarButtonItem itemWithImage:@"mine-setting-icon" highImage:@"mine-setting-icon-click" target:self action:@selector(settingClick)];
+    UIBarButtonItem *moonItem = [UIBarButtonItem itemWithImage:@"mine-moon-icon" highImage:@"mine-moon-icon-click" target:self action:@selector(moonClick)];
+    self.navigationItem.rightBarButtonItems = @[settingItem, moonItem];
 }
 
-- (void)setting
+- (void)settingClick
+{
+    [self.navigationController pushViewController:[[SettingViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
+}
+
+- (void)moonClick
 {
     
 }
 
-- (void)moon
-{
-    
-}
 
 @end

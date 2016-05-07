@@ -26,6 +26,7 @@
 // 全局色
 #define CYGlobalColor CYColor(229, 229, 229)
 
+#import <SVProgressHUD.h>
 #import "UIBarButtonItem+CYExtension.h"
 #import "UIView+Extension.h"
 #define MAS_SHORTHAND

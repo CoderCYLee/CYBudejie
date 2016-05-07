@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecommendViewController">
+            <connections>
+                <outlet property="categoryTableView" destination="3Dy-0k-EHa" id="v7h-iM-6yY"/>
+                <outlet property="userTableView" destination="TnX-pY-f5a" id="s3K-4I-BNz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TnX-pY-f5a">
+                    <rect key="frame" x="70" y="0.0" width="530" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="WXc-db-bdZ"/>
+                        <outlet property="delegate" destination="-1" id="tEo-Sg-PAS"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Dy-0k-EHa">
+                    <rect key="frame" x="0.0" y="0.0" width="70" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="6Kn-G6-iLw"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="uJs-BS-w21"/>
+                        <outlet property="delegate" destination="-1" id="qOu-UR-vqg"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="TnX-pY-f5a" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="KVZ-sx-2lj"/>
+                <constraint firstItem="3Dy-0k-EHa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QGm-t8-cNb"/>
+                <constraint firstItem="TnX-pY-f5a" firstAttribute="leading" secondItem="3Dy-0k-EHa" secondAttribute="trailing" id="TGl-jS-PND"/>
+                <constraint firstItem="3Dy-0k-EHa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eZF-Le-6uo"/>
+                <constraint firstAttribute="bottom" secondItem="3Dy-0k-EHa" secondAttribute="bottom" id="lMn-eG-u3m"/>
+                <constraint firstAttribute="bottom" secondItem="TnX-pY-f5a" secondAttribute="bottom" id="rIn-Rt-AV7"/>
+                <constraint firstAttribute="trailing" secondItem="TnX-pY-f5a" secondAttribute="trailing" id="t01-CT-6ab"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
