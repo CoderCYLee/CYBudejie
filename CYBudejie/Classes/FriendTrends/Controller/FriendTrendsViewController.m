@@ -9,6 +9,7 @@
 #import "FriendTrendsViewController.h"
 #import "RecommendViewController.h"
 
+
 @interface FriendTrendsViewController ()
 
 @end
@@ -22,6 +23,8 @@
     self.view.backgroundColor = CYGlobalColor;
     
     [self setupNavBar];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

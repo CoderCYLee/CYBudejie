@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		E3E8CF634A8EDE1CF8073F90 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1F0874D2DD61EC233293D1 /* libPods.a */; };
+		E776645F1CDDE0AD0054A5F9 /* RecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E776645E1CDDE0AD0054A5F9 /* RecommendCategory.m */; };
+		E77664621CDDE0BC0054A5F9 /* RecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E77664611CDDE0BC0054A5F9 /* RecommendUser.m */; };
+		E77664661CDDE27C0054A5F9 /* RecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E77664641CDDE27C0054A5F9 /* RecommendCategoryCell.m */; };
+		E77664671CDDE27C0054A5F9 /* RecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E77664651CDDE27C0054A5F9 /* RecommendCategoryCell.xib */; };
+		E776646B1CDDE2910054A5F9 /* RecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E77664691CDDE2910054A5F9 /* RecommendUserCell.m */; };
+		E776646C1CDDE2910054A5F9 /* RecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E776646A1CDDE2910054A5F9 /* RecommendUserCell.xib */; };
 		E797CFC11CD62B1E0089F3EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E797CFC01CD62B1E0089F3EB /* Assets.xcassets */; };
 		E797CFCF1CD62B1E0089F3EB /* CYBudejieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E797CFCE1CD62B1E0089F3EB /* CYBudejieUITests.m */; };
 		E797CFF41CD634970089F3EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E797CFF11CD634970089F3EB /* AppDelegate.m */; };
@@ -42,6 +48,16 @@
 /* Begin PBXFileReference section */
 		5C1F0874D2DD61EC233293D1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C358C6676914E182BE7DA6ED /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E776645D1CDDE0AD0054A5F9 /* RecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCategory.h; sourceTree = "<group>"; };
+		E776645E1CDDE0AD0054A5F9 /* RecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCategory.m; sourceTree = "<group>"; };
+		E77664601CDDE0BC0054A5F9 /* RecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendUser.h; sourceTree = "<group>"; };
+		E77664611CDDE0BC0054A5F9 /* RecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendUser.m; sourceTree = "<group>"; };
+		E77664631CDDE27C0054A5F9 /* RecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCategoryCell.h; sourceTree = "<group>"; };
+		E77664641CDDE27C0054A5F9 /* RecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCategoryCell.m; sourceTree = "<group>"; };
+		E77664651CDDE27C0054A5F9 /* RecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendCategoryCell.xib; sourceTree = "<group>"; };
+		E77664681CDDE2910054A5F9 /* RecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendUserCell.h; sourceTree = "<group>"; };
+		E77664691CDDE2910054A5F9 /* RecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendUserCell.m; sourceTree = "<group>"; };
+		E776646A1CDDE2910054A5F9 /* RecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendUserCell.xib; sourceTree = "<group>"; };
 		E797CFB11CD62B1E0089F3EB /* CYBudejie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CYBudejie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E797CFC01CD62B1E0089F3EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E797CFC51CD62B1E0089F3EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -247,6 +263,10 @@
 		E797CFE21CD634970089F3EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E776645D1CDDE0AD0054A5F9 /* RecommendCategory.h */,
+				E776645E1CDDE0AD0054A5F9 /* RecommendCategory.m */,
+				E77664601CDDE0BC0054A5F9 /* RecommendUser.h */,
+				E77664611CDDE0BC0054A5F9 /* RecommendUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -263,6 +283,12 @@
 		E797CFE41CD634970089F3EB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E77664631CDDE27C0054A5F9 /* RecommendCategoryCell.h */,
+				E77664641CDDE27C0054A5F9 /* RecommendCategoryCell.m */,
+				E77664651CDDE27C0054A5F9 /* RecommendCategoryCell.xib */,
+				E77664681CDDE2910054A5F9 /* RecommendUserCell.h */,
+				E77664691CDDE2910054A5F9 /* RecommendUserCell.m */,
+				E776646A1CDDE2910054A5F9 /* RecommendUserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -458,6 +484,8 @@
 			files = (
 				E7A192401CD6F9C2003DE880 /* FriendTrendsViewController.xib in Resources */,
 				E797CFC11CD62B1E0089F3EB /* Assets.xcassets in Resources */,
+				E77664671CDDE27C0054A5F9 /* RecommendCategoryCell.xib in Resources */,
+				E776646C1CDDE2910054A5F9 /* RecommendUserCell.xib in Resources */,
 				E7A192451CD6FBC4003DE880 /* RecommendViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,14 +552,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E776646B1CDDE2910054A5F9 /* RecommendUserCell.m in Sources */,
 				E797D0041CD637660089F3EB /* FriendTrendsViewController.m in Sources */,
 				E797CFFB1CD636340089F3EB /* NavigationViewController.m in Sources */,
 				E797D0131CD6535F0089F3EB /* UIView+Extension.m in Sources */,
 				E797CFF51CD634970089F3EB /* main.m in Sources */,
+				E77664621CDDE0BC0054A5F9 /* RecommendUser.m in Sources */,
 				E7A192481CD6FE0C003DE880 /* RecommendTool.m in Sources */,
 				E797CFF81CD6350C0089F3EB /* MainViewController.m in Sources */,
+				E776645F1CDDE0AD0054A5F9 /* RecommendCategory.m in Sources */,
 				E7A192441CD6FBC4003DE880 /* RecommendViewController.m in Sources */,
 				E797D0161CD6F3120089F3EB /* CYHTTPTool.m in Sources */,
+				E77664661CDDE27C0054A5F9 /* RecommendCategoryCell.m in Sources */,
 				E797D0011CD637440089F3EB /* NewViewController.m in Sources */,
 				E797D0101CD651C60089F3EB /* TabBar.m in Sources */,
 				E797CFFE1CD637180089F3EB /* EssenceViewController.m in Sources */,
@@ -652,6 +684,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = CYBudejie/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = CYBudejie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Futurestar.CYBudejie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -667,6 +700,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = CYBudejie/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = CYBudejie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Futurestar.CYBudejie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
