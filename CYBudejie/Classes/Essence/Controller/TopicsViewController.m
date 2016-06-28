@@ -10,6 +10,7 @@
 #import "TopicTool.h"
 #import "TopicFrame.h"
 #import "TopicCell.h"
+#import "NewViewController.h"
 
 @interface TopicsViewController ()
 
@@ -81,6 +82,9 @@
 #pragma mark - 加载数据
 - (void)loadNewTopics
 {
+    // 结束上啦
+    [self.tableView.mj_footer endRefreshing];
+    
     NSNumber *lastPage = self.param.page;
     
     self.param.page = @1;
@@ -138,8 +142,7 @@
 {
     if (!_param) {
         self.param = [[TopicParam alloc] init];
-//        self.param.a = [self.parentViewController isKindOfClass:[New]]
-        
+        self.param.a = [self.parentViewController isKindOfClass:[NewViewController class]] ? @"newlist" : @"list";
         self.param.c = @"data";
         self.param.type = self.type;
     }

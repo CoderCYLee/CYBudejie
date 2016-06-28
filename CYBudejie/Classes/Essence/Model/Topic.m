@@ -12,6 +12,17 @@
 
 @implementation Topic
 
++ (NSDictionary *)replacedKeyFromPropertyName
+{
+    return @{
+             @"small_image" : @"image0",
+             @"large_image" : @"image1",
+             @"middle_image" : @"image2",
+             @"top_cmt" : @"top_cmt[0]" //
+             };
+}
+
+
 + (NSDictionary *)objectClassInArray
 {
     return @{@"themes" : [Theme class]};

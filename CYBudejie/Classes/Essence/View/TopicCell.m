@@ -10,6 +10,10 @@
 #import "Topic.h"
 #import "TopicFrame.h"
 
+#import "VideoView.h"
+#import "VoiceView.h"
+#import "PictureView.h"
+
 @interface TopicCell()
 
 /** 头像 */
@@ -30,6 +34,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *dingButton;
 /** 是否位新浪会员 */
 @property (weak, nonatomic) IBOutlet UIImageView *vipView;
+
+/** 视频内容 */
+@property (weak, nonatomic) VideoView *videoView;
+/** 音频内容 */
+@property (weak, nonatomic) VoiceView *voiceView;
+/** 图片内容 */
+@property (weak, nonatomic) PictureView *pictureView;
 
 @end
 
@@ -102,27 +113,51 @@
     [self setupButton:self.commentButton count:topic.comment placeholder:@"评论"];
     
     // 中间内容
-//    XMGContentView *contentView = nil;
-//    if (topic.type == XMGTopicsTypePicture) {
-//        contentView = self.pictureView;
-//        self.voiceView.hidden = YES;
-//        self.videoView.hidden = YES;
-//    } else if (topic.type == XMGTopicsTypeVideo) {
-//        contentView = self.videoView;
-//        self.pictureView.hidden = YES;
-//        self.voiceView.hidden = YES;
-//    } else if (topic.type == XMGTopicsTypeVoice) {
-//        contentView = self.voiceView;
-//        self.pictureView.hidden = YES;
-//        self.videoView.hidden = YES;
-//    } else {
-//        self.pictureView.hidden = YES;
-//        self.videoView.hidden = YES;
-//        self.voiceView.hidden = YES;
-//    }
-//    contentView.hidden = NO;
-//    contentView.frame = topicFrame.contentFrame;
-//    contentView.topic = topic;
+    ContentView *contentView = nil;
+    if (topic.type == CYTopicsTypePicture) {
+        contentView = self.pictureView;
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
+    } else if (topic.type == CYTopicsTypeVideo) {
+        contentView = self.videoView;
+        self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
+    } else if (topic.type == CYTopicsTypeVoice) {
+        contentView = self.voiceView;
+        self.pictureView.hidden = YES;
+        self.videoView.hidden = YES;
+    } else {
+        self.pictureView.hidden = YES;
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = YES;
+    }
+    contentView.hidden = NO;
+    contentView.frame = topicFrame.contentFrame;
+    contentView.topic = topic;
+}
+
+- (VideoView *)videoView
+{
+    if (!_videoView) {
+        [self.contentView addSubview:_videoView = [VideoView videoView]];
+    }
+    return _videoView;
+}
+
+- (VoiceView *)voiceView
+{
+    if (!_voiceView) {
+        [self.contentView addSubview:_voiceView = [VoiceView voiceView]];
+    }
+    return _voiceView;
+}
+
+- (PictureView *)pictureView
+{
+    if (!_pictureView) {
+        [self.contentView addSubview:_pictureView = [PictureView pictureView]];
+    }
+    return _pictureView;
 }
 
 @end

@@ -44,6 +44,14 @@
 /** 视频或图片类型帖子的高度 */
 @property (assign, nonatomic) CGFloat height;
 
+
+/** 小图片的URL */
+@property (nonatomic, copy) NSString *small_image;
+/** 中图片的URL */
+@property (nonatomic, copy) NSString *middle_image;
+/** 大图片的URL */
+@property (nonatomic, copy) NSString *large_image;
+
 /****** 音频相关 ******/
 /** 音频的时长 */
 @property (assign, nonatomic) int voicetime;
