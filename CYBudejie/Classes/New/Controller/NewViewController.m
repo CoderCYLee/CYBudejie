@@ -31,7 +31,7 @@
 
 - (void)tagClick
 {
-    
+    CYLogFunc;
 }
 
 - (void)didReceiveMemoryWarning {

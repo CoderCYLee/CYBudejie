@@ -8,7 +8,7 @@
 
 #import "FriendTrendsViewController.h"
 #import "RecommendViewController.h"
-
+#import "LoginViewController.h"
 
 @interface FriendTrendsViewController ()
 
@@ -43,6 +43,11 @@
 {
     RecommendViewController *vc = [[RecommendViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)loginRegister {
+    LoginViewController *login = [[LoginViewController alloc] init];
+    [self presentViewController:login animated:YES completion:nil];
 }
 
 @end
