@@ -15,6 +15,12 @@
             <rect key="frame" x="0.0" y="0.0" width="328" height="193"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="irB-E3-g3X">
+                    <rect key="frame" x="0.0" y="20" width="328" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="oQx-Ud-ePD"/>
+                    </constraints>
+                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CPN-zj-YXn">
                     <rect key="frame" x="0.0" y="0.0" width="328" height="193"/>
                 </imageView>
@@ -37,16 +43,17 @@
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uIP-dM-wl0" customClass="M13ProgressViewRing">
                     <rect key="frame" x="114" y="47" width="100" height="100"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="7KR-xM-YkB"/>
                         <constraint firstAttribute="height" constant="100" id="FEd-fK-uIt"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="uIP-dM-wl0" secondAttribute="centerX" id="0sJ-G4-e4E"/>
+                <constraint firstAttribute="trailing" secondItem="irB-E3-g3X" secondAttribute="trailing" id="5NQ-MI-gj0"/>
                 <constraint firstItem="Hyg-CK-94Y" firstAttribute="leading" secondItem="xaf-oU-l11" secondAttribute="leading" id="BdI-DY-Dmr"/>
                 <constraint firstAttribute="centerY" secondItem="uIP-dM-wl0" secondAttribute="centerY" id="EWL-fM-SKL"/>
                 <constraint firstAttribute="trailing" secondItem="Hyg-CK-94Y" secondAttribute="trailing" id="Jcc-YK-5rf"/>
@@ -57,6 +64,8 @@
                 <constraint firstItem="CPN-zj-YXn" firstAttribute="leading" secondItem="xaf-oU-l11" secondAttribute="leading" id="gJz-XS-cd7"/>
                 <constraint firstItem="8Ea-zO-8q2" firstAttribute="leading" secondItem="xaf-oU-l11" secondAttribute="leading" id="kji-gK-tvg"/>
                 <constraint firstItem="CPN-zj-YXn" firstAttribute="top" secondItem="xaf-oU-l11" secondAttribute="top" id="lME-TK-gGa"/>
+                <constraint firstItem="irB-E3-g3X" firstAttribute="top" secondItem="xaf-oU-l11" secondAttribute="top" constant="20" id="srg-ko-DIx"/>
+                <constraint firstItem="irB-E3-g3X" firstAttribute="leading" secondItem="xaf-oU-l11" secondAttribute="leading" id="wTi-lY-Xzs"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -71,6 +80,7 @@
     </objects>
     <resources>
         <image name="common-gif" width="31" height="31"/>
+        <image name="imageBackground" width="75" height="15"/>
         <image name="see-big-picture" width="19" height="19"/>
         <image name="see-big-picture-background" width="285" height="43"/>
     </resources>

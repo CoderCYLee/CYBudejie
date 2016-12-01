@@ -13,6 +13,7 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    // 如果出现尺寸发生问题，可能是因为这个属性导致的
     self.autoresizingMask = UIViewAutoresizingNone;
     self.clipsToBounds = YES;
 }
