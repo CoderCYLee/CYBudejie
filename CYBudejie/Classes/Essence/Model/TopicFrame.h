@@ -11,10 +11,10 @@
 
 @interface TopicFrame : NSObject
 
-@property (strong, nonatomic) Topic *topic;
+@property (nonatomic, strong) Topic *topic;
 
-@property (assign, nonatomic) CGFloat cellHeight;
+@property (nonatomic, readonly, assign) CGFloat cellHeight;
 
-@property (assign, nonatomic) CGRect contentFrame;
+@property (nonatomic, assign) CGRect contentFrame;
 
 @end

@@ -14,9 +14,9 @@
 
 + (void)tagsWithParam:(TagsParam *)parame success:(TagsSuccess)success failure:(TagsFailure)failure
 {
-    [CYHTTPTool GET:CYMainURL params:parame success:^(id json) {
-        !success ? : success([Tag mj_objectArrayWithKeyValuesArray:json]);
-    } failture:failure];
+//    [CYHTTPTool GET:CYMainURL params:parame success:^(id json) {
+//        !success ? : success([Tag mj_objectArrayWithKeyValuesArray:json]);
+//    } failture:failure];
 }
 
 @end

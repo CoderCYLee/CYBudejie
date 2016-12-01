@@ -193,7 +193,7 @@ static NSString * const UserId = @"user";
     self.params = params;
     
     // 发送请求给服务器, 加载右侧的数据
-    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         // 字典数组 -> 模型数组
         NSArray *users = [RecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
@@ -240,7 +240,7 @@ static NSString * const UserId = @"user";
     params[@"page"] = @(++category.currentPage);
     self.params = params;
     
-    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         // 字典数组 -> 模型数组
         NSArray *users = [RecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         

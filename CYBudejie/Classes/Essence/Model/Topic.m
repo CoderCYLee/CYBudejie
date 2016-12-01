@@ -12,7 +12,8 @@
 
 @implementation Topic
 
-+ (NSDictionary *)replacedKeyFromPropertyName
+// 用本地
++ (NSDictionary *)mj_replacedKeyFromPropertyName
 {
     return @{
              @"small_image" : @"image0",
@@ -22,8 +23,7 @@
              };
 }
 
-
-+ (NSDictionary *)objectClassInArray
++ (NSDictionary *)mj_objectClassInArray
 {
     return @{@"themes" : [Theme class]};
 }
