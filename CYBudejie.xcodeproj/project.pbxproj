@@ -14,6 +14,9 @@
 		E70164421D23BD840020541E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E70164401D23BD840020541E /* LoginViewController.xib */; };
 		E70164451D23BEF70020541E /* CYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E70164441D23BEF70020541E /* CYTextField.m */; };
 		E70164481D23BFFA0020541E /* CYVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E70164471D23BFFA0020541E /* CYVerticalButton.m */; };
+		E70543751DF031C800441036 /* CYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = E70543741DF031C800441036 /* CYProgressView.m */; };
+		E705437A1DF0337200441036 /* CYPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E70543781DF0337200441036 /* CYPublishViewController.m */; };
+		E705437B1DF0337200441036 /* CYPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E70543791DF0337200441036 /* CYPublishViewController.xib */; };
 		E776645F1CDDE0AD0054A5F9 /* RecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E776645E1CDDE0AD0054A5F9 /* RecommendCategory.m */; };
 		E77664621CDDE0BC0054A5F9 /* RecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E77664611CDDE0BC0054A5F9 /* RecommendUser.m */; };
 		E77664661CDDE27C0054A5F9 /* RecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E77664641CDDE27C0054A5F9 /* RecommendCategoryCell.m */; };
@@ -90,6 +93,11 @@
 		E70164441D23BEF70020541E /* CYTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYTextField.m; sourceTree = "<group>"; };
 		E70164461D23BFFA0020541E /* CYVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYVerticalButton.h; sourceTree = "<group>"; };
 		E70164471D23BFFA0020541E /* CYVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYVerticalButton.m; sourceTree = "<group>"; };
+		E70543731DF031C800441036 /* CYProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYProgressView.h; sourceTree = "<group>"; };
+		E70543741DF031C800441036 /* CYProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYProgressView.m; sourceTree = "<group>"; };
+		E70543771DF0337200441036 /* CYPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYPublishViewController.h; sourceTree = "<group>"; };
+		E70543781DF0337200441036 /* CYPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYPublishViewController.m; sourceTree = "<group>"; };
+		E70543791DF0337200441036 /* CYPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYPublishViewController.xib; sourceTree = "<group>"; };
 		E776645D1CDDE0AD0054A5F9 /* RecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCategory.h; sourceTree = "<group>"; };
 		E776645E1CDDE0AD0054A5F9 /* RecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCategory.m; sourceTree = "<group>"; };
 		E77664601CDDE0BC0054A5F9 /* RecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendUser.h; sourceTree = "<group>"; };
@@ -237,6 +245,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		E70543761DF0334800441036 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E70543771DF0337200441036 /* CYPublishViewController.h */,
+				E70543781DF0337200441036 /* CYPublishViewController.m */,
+				E70543791DF0337200441036 /* CYPublishViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		E797CFA81CD62B1E0089F3EB = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +393,8 @@
 				E7A3B4421D227B240033A37C /* VoiceView.h */,
 				E7A3B4431D227B240033A37C /* VoiceView.m */,
 				E7A3B4471D227B3D0033A37C /* VoiceView.xib */,
+				E70543731DF031C800441036 /* CYProgressView.h */,
+				E70543741DF031C800441036 /* CYProgressView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -545,6 +565,7 @@
 		E797CFEF1CD634970089F3EB /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				E70543761DF0334800441036 /* Controller */,
 				E797CFF01CD634970089F3EB /* AppDelegate.h */,
 				E797CFF11CD634970089F3EB /* AppDelegate.m */,
 				E797CFF21CD634970089F3EB /* main.m */,
@@ -647,6 +668,7 @@
 				E7A192451CD6FBC4003DE880 /* RecommendViewController.xib in Resources */,
 				E7A3B4481D227B3D0033A37C /* VoiceView.xib in Resources */,
 				E7A3B4301D2266D30033A37C /* TopicCell.xib in Resources */,
+				E705437B1DF0337200441036 /* CYPublishViewController.xib in Resources */,
 				E7A3B4381D2278690033A37C /* PictureView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -732,6 +754,7 @@
 				E70164481D23BFFA0020541E /* CYVerticalButton.m in Sources */,
 				E7A3B4161D225D4D0033A37C /* TopicFrame.m in Sources */,
 				E797D0161CD6F3120089F3EB /* CYHTTPTool.m in Sources */,
+				E705437A1DF0337200441036 /* CYPublishViewController.m in Sources */,
 				E77664661CDDE27C0054A5F9 /* RecommendCategoryCell.m in Sources */,
 				E70164411D23BD840020541E /* LoginViewController.m in Sources */,
 				E7A3B44C1D227EC50033A37C /* ShowPictureViewController.m in Sources */,
@@ -740,6 +763,7 @@
 				E7A3B41C1D225D5C0033A37C /* Tag.m in Sources */,
 				E797D0011CD637440089F3EB /* NewViewController.m in Sources */,
 				E7A3B4131D225D420033A37C /* TopicResult.m in Sources */,
+				E70543751DF031C800441036 /* CYProgressView.m in Sources */,
 				E7A3B4221D225EEE0033A37C /* NSDate+Extension.m in Sources */,
 				E7A3B40D1D225D250033A37C /* Topic.m in Sources */,
 				E797D0101CD651C60089F3EB /* TabBar.m in Sources */,

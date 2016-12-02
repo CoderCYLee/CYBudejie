@@ -7,13 +7,13 @@
 //
 
 #import "PictureView.h"
-#import "M13ProgressViewRing.h"
+#import "CYProgressView.h"
 #import "Topic.h"
 #import "ShowPictureViewController.h"
 
 @interface PictureView()
 
-@property (weak, nonatomic) IBOutlet M13ProgressViewRing *progressView;
+@property (weak, nonatomic) IBOutlet CYProgressView *progressView;
 @property (weak, nonatomic) IBOutlet UIImageView *gifView;
 @property (weak, nonatomic) IBOutlet UIButton *seeBigButton;
 

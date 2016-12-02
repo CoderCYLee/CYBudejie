@@ -7,6 +7,7 @@
 //
 
 #import "TabBar.h"
+#import "CYPublishView.h"
 
 @interface TabBar ()
 
@@ -33,7 +34,10 @@
 
 - (void)publishClick
 {
-    CYLog(@"publishClick");
+    CYPublishView *publish = [[CYPublishView alloc] init];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publish animated:YES completion:nil];
+    
+    
 }
 
 - (void)layoutSubviews
