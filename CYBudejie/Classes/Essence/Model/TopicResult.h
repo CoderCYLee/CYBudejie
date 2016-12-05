@@ -18,7 +18,7 @@
 /** 默认情况下，就是一页20个帖子情况下的最大页数 */
 @property (assign, nonatomic) int page;
 /** 帖子数据 */
-//@property (strong, nonatomic) NSArray<XMGTopic *> *list;
+//@property (strong, nonatomic) NSArray<Topic *> *list;
 @property (strong, nonatomic) NSArray *list;
 
 @end
