@@ -9,6 +9,7 @@
 #import "Topic.h"
 #import "Theme.h"
 #import "NSDate+Extension.h"
+#import "CYComment.h"
 
 @implementation Topic
 
@@ -19,13 +20,13 @@
              @"small_image" : @"image0",
              @"large_image" : @"image1",
              @"middle_image" : @"image2",
-             @"top_cmt" : @"top_cmt[0]" //
+//             @"top_cmt" : @"top_cmt[0]" //
              };
 }
 
 + (NSDictionary *)mj_objectClassInArray
 {
-    return @{@"themes" : [Theme class]};
+    return @{@"themes" : [Theme class], @"top_cmt":[CYComment class]};
 }
 
 - (NSString *)created_at

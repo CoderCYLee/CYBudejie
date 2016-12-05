@@ -8,6 +8,8 @@
 
 #import "TopicFrame.h"
 #import "Topic.h"
+#import "CYComment.h"
+#import "CYUser.h"
 
 @interface TopicFrame ()
 
@@ -54,6 +56,13 @@
             }
             self.contentFrame = CGRectMake(contentX, contentY, contentW, contentH);
             maxY = contentY + contentH + 10;
+        }
+        
+        CYComment *cmt = [self.topic.top_cmt firstObject];
+        if (cmt) {
+            NSString *content = [NSString stringWithFormat:@"%@ : %@", cmt.user.username, cmt.content];
+            CGFloat contentH = [content boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * 10, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
+            maxY += 20 + contentH + 10;
         }
         
         // cell的高度

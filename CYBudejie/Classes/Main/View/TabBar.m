@@ -34,10 +34,7 @@
 
 - (void)publishClick
 {
-    CYPublishView *publish = [[CYPublishView alloc] init];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publish animated:YES completion:nil];
-    
-    
+    [CYPublishView show];
 }
 
 - (void)layoutSubviews

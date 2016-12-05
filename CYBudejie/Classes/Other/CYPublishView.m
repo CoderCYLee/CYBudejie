@@ -10,6 +10,8 @@
 #import "CYVerticalButton.h"
 #import <POP.h>
 
+#define CYRootView [UIApplication sharedApplication].keyWindow.rootViewController.view
+
 static CGFloat const CYAnimationDelay = 0.1;
 static CGFloat const CYSpringFactor = 10;
 
@@ -19,10 +21,32 @@ static CGFloat const CYSpringFactor = 10;
 
 @implementation CYPublishView
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
++ (instancetype)publishView
+{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
+}
+
+static UIWindow *window_;
+
++ (void)show
+{
+    // 创建窗口
+    window_ = [[UIWindow alloc] init];
+    window_.frame = [UIScreen mainScreen].bounds;
+    window_.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.8];
+    window_.hidden = NO;
     
-    self.view.userInteractionEnabled = NO;
+    CYPublishView *publishView = [CYPublishView publishView];
+    publishView.frame  =window_.frame;
+    [window_ addSubview:publishView];
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+//    CYRootView.userInteractionEnabled = NO;
+    // 让不能点击
+    self.userInteractionEnabled = NO;
     
     // 数据
     NSArray *images = @[@"publish-video", @"publish-picture", @"publish-text", @"publish-audio", @"publish-review", @"publish-offline"];
@@ -40,7 +64,7 @@ static CGFloat const CYSpringFactor = 10;
         CYVerticalButton *button = [[CYVerticalButton alloc] init];
         button.tag = i;
         [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addSubview:button];
+        [self addSubview:button];
         
         // 设置内容
         button.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -71,7 +95,7 @@ static CGFloat const CYSpringFactor = 10;
 //    UIImageView *sloganView = [[UIImageView alloc] initWithFrame:CGRectZero];
 //    sloganView.image = [UIImage imageNamed:@"app_slogan"];
     sloganView.cy_y = kScreenH * 0.2 - kScreenH;
-    [self.view addSubview:sloganView];
+    [self addSubview:sloganView];
     
     // 标语动画
     POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
@@ -85,15 +109,12 @@ static CGFloat const CYSpringFactor = 10;
     anim.springSpeed = CYSpringFactor;
     [anim setCompletionBlock:^(POPAnimation *animation, BOOL finished) {
         // 标语动画执行完毕, 恢复点击事件
-        self.view.userInteractionEnabled = YES;
+        self.userInteractionEnabled = YES;
+//        CYRootView.userInteractionEnabled = YES;
+        
     }];
     [sloganView pop_addAnimation:anim forKey:nil];
 
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /**
@@ -117,14 +138,14 @@ static CGFloat const CYSpringFactor = 10;
      POPSpringAnimation // 弹簧动画
      POPDecayAnimation  // 衰减动画
      */
-    
+//    CYRootView.userInteractionEnabled = NO;
     // 让控制器的view不能被点击
-    self.view.userInteractionEnabled = NO;
+    self.userInteractionEnabled = NO;
     
-    int beginIndex = 2;
+    int beginIndex = 1;
     
-    for (int i = beginIndex; i<self.view.subviews.count; i++) {
-        UIView *subview = self.view.subviews[i];
+    for (int i = beginIndex; i<self.subviews.count; i++) {
+        UIView *subview = self.subviews[i];
         
         POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPViewCenter];
         CGFloat centerY = subview.cy_centerY + kScreenH;
@@ -135,9 +156,14 @@ static CGFloat const CYSpringFactor = 10;
         [subview pop_addAnimation:anim forKey:nil];
         
         // 监听最后一个动画
-        if (i == self.view.subviews.count - 1) {
+        if (i == self.subviews.count - 1) {
             [anim setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
-                [self dismissViewControllerAnimated:NO completion:nil];
+                
+//                CYRootView.userInteractionEnabled = YES;
+                [self removeFromSuperview];
+                
+                // 销毁窗口
+                window_ = nil;
                 
                 // 执行传进来的completionBlock参数
                 !completionBlock ? : completionBlock();

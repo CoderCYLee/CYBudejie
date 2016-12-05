@@ -33,6 +33,9 @@
 @property (strong, nonatomic) NSArray *themes;
 /** 是否为新浪会员 */
 @property (assign, nonatomic, getter=isSina_v) BOOL sina_v;
+/** 最热评论(期望这个数组中存放的是CYComment模型) */
+@property (nonatomic, strong) NSArray *top_cmt;
+
 
 /****** 图片相关 ******/
 /** 配图 */

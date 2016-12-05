@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CYPublishView : UIViewController
+@interface CYPublishView : UIView
+
++ (void)show;
 
 @end

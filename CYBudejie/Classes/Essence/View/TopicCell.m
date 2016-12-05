@@ -9,6 +9,8 @@
 #import "TopicCell.h"
 #import "Topic.h"
 #import "TopicFrame.h"
+#import "CYUser.h"
+#import "CYComment.h"
 
 #import "VideoView.h"
 #import "VoiceView.h"
@@ -24,6 +26,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *createdAtLabel;
 /** 文字 */
 @property (weak, nonatomic) IBOutlet UILabel *text_label;
+/** 最热评论的内容 */
+@property (weak, nonatomic) IBOutlet UILabel *topCmtContentLabel;
+/** 最热评论的整体 */
+@property (weak, nonatomic) IBOutlet UIView *topCmtView;
 /** “踩”按钮 */
 @property (weak, nonatomic) IBOutlet UIButton *caiButton;
 /** “分享”按钮 */
@@ -131,6 +137,16 @@
         self.videoView.hidden = YES;
         self.voiceView.hidden = YES;
     }
+    
+    // 处理热门评论
+    CYComment *cmt = [topic.top_cmt firstObject];
+    if (cmt) {
+        self.topCmtView.hidden = NO;
+        self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@ : %@", cmt.user.username, cmt.content];
+    } else {
+        self.topCmtView.hidden = YES;
+    }
+    
     contentView.hidden = NO;
     contentView.frame = topicFrame.contentFrame;
     contentView.topic = topic;
