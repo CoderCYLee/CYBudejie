@@ -20,6 +20,7 @@
              @"small_image" : @"image0",
              @"large_image" : @"image1",
              @"middle_image" : @"image2",
+             @"ID" : @"id"
 //             @"top_cmt" : @"top_cmt[0]" //
              };
 }
@@ -76,10 +77,12 @@
     }
 }
 
-- (BOOL)isEqual:(Topic *)object
-{
-    return [self.id isEqualToString:object.id];
-}
+
+// 如果出现与系统关键字一样的需要这么处理
+//- (BOOL)isEqual:(Topic *)object
+//{
+//    return [self.id isEqualToString:object.id];
+//}
 
 
 @end

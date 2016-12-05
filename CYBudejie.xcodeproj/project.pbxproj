@@ -19,6 +19,8 @@
 		E705437B1DF0337200441036 /* CYPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E70543791DF0337200441036 /* CYPublishView.xib */; };
 		E70543F31DF5408000441036 /* CYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E70543F21DF5408000441036 /* CYUser.m */; };
 		E70543F61DF5408D00441036 /* CYComment.m in Sources */ = {isa = PBXBuildFile; fileRef = E70543F51DF5408D00441036 /* CYComment.m */; };
+		E7134D7B1DF54C92005B600C /* CYCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7134D791DF54C92005B600C /* CYCommentViewController.m */; };
+		E7134D7C1DF54C92005B600C /* CYCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7134D7A1DF54C92005B600C /* CYCommentViewController.xib */; };
 		E776645F1CDDE0AD0054A5F9 /* RecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E776645E1CDDE0AD0054A5F9 /* RecommendCategory.m */; };
 		E77664621CDDE0BC0054A5F9 /* RecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E77664611CDDE0BC0054A5F9 /* RecommendUser.m */; };
 		E77664661CDDE27C0054A5F9 /* RecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E77664641CDDE27C0054A5F9 /* RecommendCategoryCell.m */; };
@@ -104,6 +106,9 @@
 		E70543F21DF5408000441036 /* CYUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYUser.m; sourceTree = "<group>"; };
 		E70543F41DF5408D00441036 /* CYComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYComment.h; sourceTree = "<group>"; };
 		E70543F51DF5408D00441036 /* CYComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYComment.m; sourceTree = "<group>"; };
+		E7134D781DF54C92005B600C /* CYCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYCommentViewController.h; sourceTree = "<group>"; };
+		E7134D791DF54C92005B600C /* CYCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYCommentViewController.m; sourceTree = "<group>"; };
+		E7134D7A1DF54C92005B600C /* CYCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYCommentViewController.xib; sourceTree = "<group>"; };
 		E776645D1CDDE0AD0054A5F9 /* RecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCategory.h; sourceTree = "<group>"; };
 		E776645E1CDDE0AD0054A5F9 /* RecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCategory.m; sourceTree = "<group>"; };
 		E77664601CDDE0BC0054A5F9 /* RecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendUser.h; sourceTree = "<group>"; };
@@ -342,6 +347,9 @@
 				E7A3B4491D227EC50033A37C /* ShowPictureViewController.h */,
 				E7A3B44A1D227EC50033A37C /* ShowPictureViewController.m */,
 				E7A3B44B1D227EC50033A37C /* ShowPictureViewController.xib */,
+				E7134D781DF54C92005B600C /* CYCommentViewController.h */,
+				E7134D791DF54C92005B600C /* CYCommentViewController.m */,
+				E7134D7A1DF54C92005B600C /* CYCommentViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -631,6 +639,7 @@
 		E797CFA91CD62B1E0089F3EB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CY;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Cyrill;
 				TargetAttributes = {
@@ -677,6 +686,7 @@
 				E776646C1CDDE2910054A5F9 /* RecommendUserCell.xib in Resources */,
 				E7A192451CD6FBC4003DE880 /* RecommendViewController.xib in Resources */,
 				E7A3B4481D227B3D0033A37C /* VoiceView.xib in Resources */,
+				E7134D7C1DF54C92005B600C /* CYCommentViewController.xib in Resources */,
 				E7A3B4301D2266D30033A37C /* TopicCell.xib in Resources */,
 				E705437B1DF0337200441036 /* CYPublishView.xib in Resources */,
 				E7A3B4381D2278690033A37C /* PictureView.xib in Resources */,
@@ -747,6 +757,7 @@
 			files = (
 				E776646B1CDDE2910054A5F9 /* RecommendUserCell.m in Sources */,
 				E797D0041CD637660089F3EB /* FriendTrendsViewController.m in Sources */,
+				E7134D7B1DF54C92005B600C /* CYCommentViewController.m in Sources */,
 				E70543F31DF5408000441036 /* CYUser.m in Sources */,
 				E70164391D23BB360020541E /* MeCell.m in Sources */,
 				E797CFFB1CD636340089F3EB /* NavigationViewController.m in Sources */,

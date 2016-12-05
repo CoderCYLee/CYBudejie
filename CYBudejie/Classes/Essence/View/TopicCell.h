@@ -11,6 +11,8 @@
 
 @interface TopicCell : UITableViewCell
 
++ (instancetype)cell;
+
 + (instancetype)cellWithTableView:(UITableView *)tableView;
 
 @property (nonatomic, strong) TopicFrame *topicFrame;

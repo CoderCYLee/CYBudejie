@@ -11,6 +11,7 @@
 #import "TopicFrame.h"
 #import "TopicCell.h"
 #import "NewViewController.h"
+#import "CYCommentViewController.h"
 
 @interface TopicsViewController ()
 
@@ -55,6 +56,12 @@
     TopicFrame *f = self.topicFrames[indexPath.row];
     
     return f.cellHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CYCommentViewController *comment = [[CYCommentViewController alloc] init];
+    comment.topicFrame = self.topicFrames[indexPath.row];
+    [self.navigationController pushViewController:comment animated:YES];
 }
 
 #pragma mark - private methods

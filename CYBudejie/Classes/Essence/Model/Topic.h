@@ -10,7 +10,7 @@
 
 @interface Topic : NSObject
 
-@property (copy, nonatomic) NSString *id;
+@property (copy, nonatomic) NSString *ID;
 /** 发帖人的昵称 */
 @property (copy, nonatomic) NSString *name;
 /** 系统审核通过后创建帖子的时间 */

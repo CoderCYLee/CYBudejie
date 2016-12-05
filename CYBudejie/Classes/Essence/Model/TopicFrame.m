@@ -72,9 +72,9 @@
     return _cellHeight;
 }
 
-- (BOOL)isEqual:(TopicFrame *)object
-{
-    return [self.topic.id isEqualToString:object.topic.id];
-}
+//- (BOOL)isEqual:(TopicFrame *)object
+//{
+//    return [self.topic.id isEqualToString:object.topic.id];
+//}
 
 @end
