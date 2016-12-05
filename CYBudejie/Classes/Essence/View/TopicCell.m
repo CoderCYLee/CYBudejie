@@ -97,6 +97,11 @@
     return cell;
 }
 
+- (IBAction)more {
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:nil cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"收藏", @"举报", nil];
+    [sheet showInView:self.window];
+}
+
 - (void)setFrame:(CGRect)frame
 {
     frame.origin.x = CYCellMargin;
@@ -145,7 +150,7 @@
     }
     
     // 处理热门评论
-    CYComment *cmt = [topic.top_cmt firstObject];
+    CYComment *cmt = topic.top_cmt;
     if (cmt) {
         self.topCmtView.hidden = NO;
         self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@ : %@", cmt.user.username, cmt.content];

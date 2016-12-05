@@ -21,6 +21,9 @@
 		E70543F61DF5408D00441036 /* CYComment.m in Sources */ = {isa = PBXBuildFile; fileRef = E70543F51DF5408D00441036 /* CYComment.m */; };
 		E7134D7B1DF54C92005B600C /* CYCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7134D791DF54C92005B600C /* CYCommentViewController.m */; };
 		E7134D7C1DF54C92005B600C /* CYCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7134D7A1DF54C92005B600C /* CYCommentViewController.xib */; };
+		E7134D7F1DF555B6005B600C /* CYCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7134D7E1DF555B6005B600C /* CYCommentHeaderView.m */; };
+		E7134D831DF55799005B600C /* CYCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7134D811DF55799005B600C /* CYCommentCell.m */; };
+		E7134D841DF55799005B600C /* CYCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7134D821DF55799005B600C /* CYCommentCell.xib */; };
 		E776645F1CDDE0AD0054A5F9 /* RecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E776645E1CDDE0AD0054A5F9 /* RecommendCategory.m */; };
 		E77664621CDDE0BC0054A5F9 /* RecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E77664611CDDE0BC0054A5F9 /* RecommendUser.m */; };
 		E77664661CDDE27C0054A5F9 /* RecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E77664641CDDE27C0054A5F9 /* RecommendCategoryCell.m */; };
@@ -109,6 +112,11 @@
 		E7134D781DF54C92005B600C /* CYCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYCommentViewController.h; sourceTree = "<group>"; };
 		E7134D791DF54C92005B600C /* CYCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYCommentViewController.m; sourceTree = "<group>"; };
 		E7134D7A1DF54C92005B600C /* CYCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYCommentViewController.xib; sourceTree = "<group>"; };
+		E7134D7D1DF555B6005B600C /* CYCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYCommentHeaderView.h; sourceTree = "<group>"; };
+		E7134D7E1DF555B6005B600C /* CYCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYCommentHeaderView.m; sourceTree = "<group>"; };
+		E7134D801DF55799005B600C /* CYCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYCommentCell.h; sourceTree = "<group>"; };
+		E7134D811DF55799005B600C /* CYCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYCommentCell.m; sourceTree = "<group>"; };
+		E7134D821DF55799005B600C /* CYCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYCommentCell.xib; sourceTree = "<group>"; };
 		E776645D1CDDE0AD0054A5F9 /* RecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCategory.h; sourceTree = "<group>"; };
 		E776645E1CDDE0AD0054A5F9 /* RecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCategory.m; sourceTree = "<group>"; };
 		E77664601CDDE0BC0054A5F9 /* RecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendUser.h; sourceTree = "<group>"; };
@@ -413,6 +421,11 @@
 				E7A3B4471D227B3D0033A37C /* VoiceView.xib */,
 				E70543731DF031C800441036 /* CYProgressView.h */,
 				E70543741DF031C800441036 /* CYProgressView.m */,
+				E7134D7D1DF555B6005B600C /* CYCommentHeaderView.h */,
+				E7134D7E1DF555B6005B600C /* CYCommentHeaderView.m */,
+				E7134D801DF55799005B600C /* CYCommentCell.h */,
+				E7134D811DF55799005B600C /* CYCommentCell.m */,
+				E7134D821DF55799005B600C /* CYCommentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -686,6 +699,7 @@
 				E776646C1CDDE2910054A5F9 /* RecommendUserCell.xib in Resources */,
 				E7A192451CD6FBC4003DE880 /* RecommendViewController.xib in Resources */,
 				E7A3B4481D227B3D0033A37C /* VoiceView.xib in Resources */,
+				E7134D841DF55799005B600C /* CYCommentCell.xib in Resources */,
 				E7134D7C1DF54C92005B600C /* CYCommentViewController.xib in Resources */,
 				E7A3B4301D2266D30033A37C /* TopicCell.xib in Resources */,
 				E705437B1DF0337200441036 /* CYPublishView.xib in Resources */,
@@ -756,6 +770,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E776646B1CDDE2910054A5F9 /* RecommendUserCell.m in Sources */,
+				E7134D831DF55799005B600C /* CYCommentCell.m in Sources */,
 				E797D0041CD637660089F3EB /* FriendTrendsViewController.m in Sources */,
 				E7134D7B1DF54C92005B600C /* CYCommentViewController.m in Sources */,
 				E70543F31DF5408000441036 /* CYUser.m in Sources */,
@@ -788,6 +803,7 @@
 				E70543751DF031C800441036 /* CYProgressView.m in Sources */,
 				E7A3B4221D225EEE0033A37C /* NSDate+Extension.m in Sources */,
 				E7A3B40D1D225D250033A37C /* Topic.m in Sources */,
+				E7134D7F1DF555B6005B600C /* CYCommentHeaderView.m in Sources */,
 				E797D0101CD651C60089F3EB /* TabBar.m in Sources */,
 				E797CFFE1CD637180089F3EB /* EssenceViewController.m in Sources */,
 				E797D0071CD6377A0089F3EB /* MeViewController.m in Sources */,

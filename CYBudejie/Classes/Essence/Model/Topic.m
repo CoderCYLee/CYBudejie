@@ -20,14 +20,14 @@
              @"small_image" : @"image0",
              @"large_image" : @"image1",
              @"middle_image" : @"image2",
-             @"ID" : @"id"
-//             @"top_cmt" : @"top_cmt[0]" //
+             @"ID" : @"id",
+             @"top_cmt" : @"top_cmt[0]" //
              };
 }
 
 + (NSDictionary *)mj_objectClassInArray
 {
-    return @{@"themes" : [Theme class], @"top_cmt":[CYComment class]};
+    return @{@"themes" : [Theme class]};
 }
 
 - (NSString *)created_at

@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="404"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F9B-xP-lwF" id="yMU-gR-1Fb">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="403.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="403"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jjl-0g-RPp" userLabel="头像">
@@ -44,9 +44,12 @@
                             <constraint firstAttribute="height" constant="20" id="gPQ-j6-vpm"/>
                             <constraint firstAttribute="width" constant="19" id="iOh-Gy-zmK"/>
                         </constraints>
-                        <state key="normal" image="cellFollowIcon"/>
+                        <state key="normal" image="cellmorebtnnormal"/>
                         <state key="disabled" image="cellFollowDisableIcon"/>
-                        <state key="highlighted" image="cellFollowClickIcon"/>
+                        <state key="highlighted" image="cellmorebtnclick"/>
+                        <connections>
+                            <action selector="more" destination="F9B-xP-lwF" eventType="touchUpInside" id="iNj-ya-Cue"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMn-fB-B2Y" userLabel="正文">
                         <rect key="frame" x="10" y="50" width="300" height="20"/>
@@ -255,9 +258,9 @@
         <image name="Profile_AddV_authen" width="14" height="14"/>
         <image name="cell-button-line" width="1" height="29"/>
         <image name="cell-content-line" width="299" height="1"/>
-        <image name="cellFollowClickIcon" width="19" height="20"/>
         <image name="cellFollowDisableIcon" width="19" height="20"/>
-        <image name="cellFollowIcon" width="19" height="20"/>
+        <image name="cellmorebtnclick" width="24" height="20"/>
+        <image name="cellmorebtnnormal" width="24" height="20"/>
         <image name="mainCellCai" width="20" height="20"/>
         <image name="mainCellCaiClick" width="20" height="20"/>
         <image name="mainCellComment" width="20" height="20"/>

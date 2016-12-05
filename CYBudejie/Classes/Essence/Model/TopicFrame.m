@@ -58,7 +58,7 @@
             maxY = contentY + contentH + 10;
         }
         
-        CYComment *cmt = [self.topic.top_cmt firstObject];
+        CYComment *cmt = self.topic.top_cmt;
         if (cmt) {
             NSString *content = [NSString stringWithFormat:@"%@ : %@", cmt.user.username, cmt.content];
             CGFloat contentH = [content boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * 10, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
