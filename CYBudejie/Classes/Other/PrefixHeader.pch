@@ -17,6 +17,8 @@
 
 #define CYLogFunc CYLog(@"%s", __func__)
 
+#import "CYConst.h"
+
 // 主请求路径
 #define CYMainURL @"http://api.budejie.com/api/api_open.php"
 
@@ -31,6 +33,7 @@
 // 全局色
 #define CYGlobalColor CYColor(229, 229, 229)
 
+
 #import <SVProgressHUD.h>
 #import "UIBarButtonItem+CYExtension.h"
 #import "UIView+Extension.h"
@@ -41,15 +44,6 @@
 #import <MJRefresh.h>
 #import <UIImageView+WebCache.h>
 #import <AFNetworking.h>
-
-
-typedef NS_ENUM(NSUInteger, CYTopicsType) {
-    CYTopicsTypeAll = 1, // 全部
-    CYTopicsTypePicture = 10, // 图片
-    CYTopicsTypeWord = 29, // 段子
-    CYTopicsTypeVoice = 31, // 声音
-    CYTopicsTypeVideo = 41 // 视频
-};
 
 
 #endif /* PrefixHeader_pch */

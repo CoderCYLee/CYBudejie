@@ -19,6 +19,7 @@
 		E705437B1DF0337200441036 /* CYPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E70543791DF0337200441036 /* CYPublishView.xib */; };
 		E70543F31DF5408000441036 /* CYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E70543F21DF5408000441036 /* CYUser.m */; };
 		E70543F61DF5408D00441036 /* CYComment.m in Sources */ = {isa = PBXBuildFile; fileRef = E70543F51DF5408D00441036 /* CYComment.m */; };
+		E70C02971DF7BE9E008E5C2B /* CYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E70C02961DF7BE9E008E5C2B /* CYConst.m */; };
 		E7134D7B1DF54C92005B600C /* CYCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7134D791DF54C92005B600C /* CYCommentViewController.m */; };
 		E7134D7C1DF54C92005B600C /* CYCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7134D7A1DF54C92005B600C /* CYCommentViewController.xib */; };
 		E7134D7F1DF555B6005B600C /* CYCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7134D7E1DF555B6005B600C /* CYCommentHeaderView.m */; };
@@ -109,6 +110,8 @@
 		E70543F21DF5408000441036 /* CYUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYUser.m; sourceTree = "<group>"; };
 		E70543F41DF5408D00441036 /* CYComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYComment.h; sourceTree = "<group>"; };
 		E70543F51DF5408D00441036 /* CYComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYComment.m; sourceTree = "<group>"; };
+		E70C02951DF7BE9E008E5C2B /* CYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYConst.h; sourceTree = "<group>"; };
+		E70C02961DF7BE9E008E5C2B /* CYConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYConst.m; sourceTree = "<group>"; };
 		E7134D781DF54C92005B600C /* CYCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYCommentViewController.h; sourceTree = "<group>"; };
 		E7134D791DF54C92005B600C /* CYCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYCommentViewController.m; sourceTree = "<group>"; };
 		E7134D7A1DF54C92005B600C /* CYCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYCommentViewController.xib; sourceTree = "<group>"; };
@@ -599,6 +602,8 @@
 				E70543761DF0334800441036 /* Controller */,
 				E797CFF01CD634970089F3EB /* AppDelegate.h */,
 				E797CFF11CD634970089F3EB /* AppDelegate.m */,
+				E70C02951DF7BE9E008E5C2B /* CYConst.h */,
+				E70C02961DF7BE9E008E5C2B /* CYConst.m */,
 				E797CFF21CD634970089F3EB /* main.m */,
 				E797CFF31CD634970089F3EB /* PrefixHeader.pch */,
 			);
@@ -816,6 +821,7 @@
 				E7A193701CD7BBEA003DE880 /* SettingViewController.m in Sources */,
 				E70543F61DF5408D00441036 /* CYComment.m in Sources */,
 				E7A3B4251D2260540033A37C /* TopicTool.m in Sources */,
+				E70C02971DF7BE9E008E5C2B /* CYConst.m in Sources */,
 				E701643D1D23BCE10020541E /* MeFooterView.m in Sources */,
 				E7A3B43B1D2279580033A37C /* ContentView.m in Sources */,
 				E7A3B4281D22605F0033A37C /* TagTool.m in Sources */,
