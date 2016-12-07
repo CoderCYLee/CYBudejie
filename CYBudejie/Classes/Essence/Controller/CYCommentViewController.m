@@ -63,6 +63,7 @@ static NSString * const CYCommentId = @"comment";
 //        self.topicFrame.topic.top_cmt = self.saved_top_cmt;
 //        [self.topicFrame.topic setValue:@0 forKeyPath:@"cellHeight"];
 //    }
+    
     [self.manager invalidateSessionCancelingTasks:YES];
 }
 
