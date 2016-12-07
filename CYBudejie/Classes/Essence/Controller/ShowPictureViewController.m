@@ -64,7 +64,6 @@
         [SVProgressHUD showErrorWithStatus:@"图片并没下载完毕!"];
         return;
     }
-    
     // 将图片写入相册
     UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
 }
