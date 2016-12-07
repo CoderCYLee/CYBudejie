@@ -87,6 +87,10 @@ static NSString * const CYCommentId = @"comment";
 {
     NSInteger hotCount = self.hotComments.count;
     NSInteger latestCount = self.latestComments.count;
+    
+    // 隐藏尾部控件
+    tableView.mj_footer.hidden = (latestCount == 0);
+    
     if (section == 0) {
         return hotCount ? hotCount : latestCount;
     }
@@ -190,12 +194,63 @@ static NSString * const CYCommentId = @"comment";
 - (void)setupRefresh {
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewComments)];
     [self.tableView.mj_header beginRefreshing];
+    
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreComments)];
     self.tableView.mj_footer.hidden = YES;
 }
 
 - (void)loadMoreComments {
     
+    // 结束之前的所有请求
+    // 这样做连session都不好使了
+//    [self.manager invalidateSessionCancelingTasks:YES];
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
+    // 页码
+    NSInteger page = self.page + 1;
+    
+    // 参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"dataList";
+    params[@"c"] = @"comment";
+    params[@"data_id"] = self.topicFrame.topic.ID;
+    params[@"page"] = @(page);
+    
+    CYComment *cmt = [self.latestComments lastObject];
+    params[@"lastcid"] = cmt.ID;
+    
+    [self.manager GET:CYMainURL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        // 没有数据
+        if (![responseObject isKindOfClass:[NSDictionary class]]) {
+            self.tableView.mj_footer.hidden = YES;
+            return;
+        }
+        
+        // 最新评论
+        NSArray *newComments = [CYComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        [self.latestComments addObjectsFromArray:newComments];
+        
+        // 页码
+        self.page = page;
+        
+        // 刷新数据
+        [self.tableView reloadData];
+        
+        // 控制footer状态
+        NSInteger total = [responseObject[@"total"] integerValue];
+        if (self.latestComments.count >= total) {
+            self.tableView.mj_footer.hidden = YES;
+        } else {
+            // 结束刷新状态
+            [self.tableView.mj_footer endRefreshing];
+        }
+        
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        [self.tableView.mj_footer endRefreshing];
+        
+    }];
 }
 
 - (void)loadNewComments
@@ -216,6 +271,9 @@ static NSString * const CYCommentId = @"comment";
         
         // 最新评论
         self.latestComments = [CYComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        
+        // 页码
+        self.page = 1;
         
         [self.tableView reloadData];
         [self.tableView.mj_header endRefreshing];

@@ -9,5 +9,8 @@
 #import "CYComment.h"
 
 @implementation CYComment
-
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{@"ID" : @"id"};
+}
 @end

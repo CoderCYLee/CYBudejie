@@ -19,6 +19,9 @@
 @property (nonatomic, strong) TopicParam *param;
 @property (nonatomic, strong) NSString *maxtime;
 
+/** 上次选中的索引(或者控制器) */
+@property (nonatomic, assign) NSInteger lastSelectedIndex;
+
 @end
 
 @implementation TopicsViewController
@@ -80,10 +83,34 @@
 
 - (void)setupTableView
 {
-    self.tableView.backgroundColor = [UIColor clearColor];
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.contentInset = UIEdgeInsetsMake(104, 0, 49, 0);
+    
+    // 设置内边距
+    CGFloat bottom = self.tabBarController.tabBar.cy_height;
+    CGFloat top = CYTitilesViewY + CYTitilesViewH;
+    self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+    // 设置滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = [UIColor clearColor];
+    
+    [CYNoteCenter addObserver:self selector:@selector(tabBarSelect) name:CYTabBarDidSelectNotification object:nil];
+    
+}
+
+- (void)tabBarSelect {
+    
+    CYLog(@"%@",[NSNumber numberWithInteger:self.tabBarController.selectedIndex]);
+    
+    // 如果是连续点击2次，直接刷新
+    if (self.lastSelectedIndex == self.tabBarController.selectedIndex && self.tabBarController.selectedViewController == self.navigationController) {
+        
+        [self.tableView.mj_header beginRefreshing];
+    }
+    
+    // 记录这一次选中的索引
+    self.lastSelectedIndex = self.tabBarController.selectedIndex;
+    
 }
 
 #pragma mark - 加载数据

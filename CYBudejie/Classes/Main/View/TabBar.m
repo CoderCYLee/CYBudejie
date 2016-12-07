@@ -41,6 +41,8 @@
 {
     [super layoutSubviews];
     
+    static BOOL added = NO;
+    
     // 原来的4个
     CGFloat width = self.cy_width / 5;
     int index = 0;
@@ -49,7 +51,18 @@
         control.cy_width = width;
         control.cy_x = index > 1 ? width * (index + 1) : width * index;
         index++;
+        
+        if (added == NO) {
+            // 监听按钮点击
+            [control addTarget:self action:@selector(controlClick) forControlEvents:UIControlEventTouchUpInside];
+        }
     }
+    
+    added = YES;
+}
+
+- (void)controlClick {
+    [CYNoteCenter postNotificationName:CYTabBarDidSelectNotification object:nil userInfo:nil];
 }
 
 @end
