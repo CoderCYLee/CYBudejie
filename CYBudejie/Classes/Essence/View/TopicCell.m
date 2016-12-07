@@ -104,10 +104,10 @@
 
 - (void)setFrame:(CGRect)frame
 {
-    frame.origin.x = CYCellMargin;
-    frame.origin.y += CYCellMargin;
-    frame.size.width -= 2 * CYCellMargin;
-    frame.size.height -= CYCellMargin;
+    frame.origin.x = CYTopicCellMargin;
+    frame.origin.y += CYTopicCellMargin;
+    frame.size.width -= 2 * CYTopicCellMargin;
+    frame.size.height -= CYTopicCellMargin;
     [super setFrame:frame];
 }
 

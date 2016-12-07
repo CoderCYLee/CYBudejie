@@ -22,9 +22,6 @@
 // 主请求路径
 #define CYMainURL @"http://api.budejie.com/api/api_open.php"
 
-// 间距
-#define CYCellMargin 10
-
 #define kScreenW [UIScreen mainScreen].bounds.size.width
 #define kScreenH [UIScreen mainScreen].bounds.size.height
 
