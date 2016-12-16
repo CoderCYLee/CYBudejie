@@ -8,8 +8,11 @@
 
 #import "SettingViewController.h"
 #import <SDImageCache.h>
+#import "CYOtherTableViewController.h"
 
 @interface SettingViewController ()
+
+@property (nonatomic, strong) UIImageView *imageView;
 
 @end
 
@@ -29,7 +32,7 @@
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -38,9 +41,17 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     
-    CGFloat size = [SDImageCache sharedImageCache].getSize / 1000.0 / 1000;
-    cell.textLabel.text = [NSString stringWithFormat:@"清除缓存（已使用%.2fMB）", size];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    if (indexPath.row == 0) {
+        CGFloat size = [SDImageCache sharedImageCache].getSize / 1000.0 / 1000;
+        cell.textLabel.text = [NSString stringWithFormat:@"清除缓存（已使用%.2fMB）", size];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    } else if (indexPath.row == 1) {
+        cell.textLabel.text = [NSString stringWithFormat:@"ActionExtension"];
+    } else if (indexPath.row == 2) {
+        cell.textLabel.text = [NSString stringWithFormat:@"Other"];
+    } else if (indexPath.row == 3) {
+        cell.textLabel.text = [NSString stringWithFormat:@"TodayExtension"];
+    }
     
     return cell;
 }
@@ -48,7 +59,25 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [[SDImageCache sharedImageCache] clearDisk];
+    
+    if (indexPath.row == 0) {
+        [[SDImageCache sharedImageCache] clearDisk];
+    } else if (indexPath.row == 1) {
+        
+        UIImage *image = [UIImage imageNamed:@"app_slogan"];
+        
+        UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:@[image] applicationActivities:nil];
+        [self presentViewController:activityVC animated:YES completion:^{
+            
+        }];
+        
+    } else if (indexPath.row == 2) {
+        CYOtherTableViewController *vc = [[CYOtherTableViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    } else if (indexPath.row == 3) {
+        
+    }
 }
 
 @end

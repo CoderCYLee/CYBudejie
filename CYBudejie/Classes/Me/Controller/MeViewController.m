@@ -58,6 +58,11 @@ static NSString *MeId = @"me";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
 #pragma mark - private methods
 - (void)setupTableView
 {

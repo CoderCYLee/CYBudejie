@@ -20,6 +20,9 @@
 		E70543F31DF5408000441036 /* CYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E70543F21DF5408000441036 /* CYUser.m */; };
 		E70543F61DF5408D00441036 /* CYComment.m in Sources */ = {isa = PBXBuildFile; fileRef = E70543F51DF5408D00441036 /* CYComment.m */; };
 		E70C02971DF7BE9E008E5C2B /* CYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E70C02961DF7BE9E008E5C2B /* CYConst.m */; };
+		E70C02CC1DF8137B008E5C2B /* ActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E70C02CB1DF8137B008E5C2B /* ActionViewController.m */; };
+		E70C02CF1DF8137B008E5C2B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70C02CD1DF8137B008E5C2B /* MainInterface.storyboard */; };
+		E70C02D31DF8137B008E5C2B /* ActionExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E70C02C81DF8137B008E5C2B /* ActionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E7134D7B1DF54C92005B600C /* CYCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7134D791DF54C92005B600C /* CYCommentViewController.m */; };
 		E7134D7C1DF54C92005B600C /* CYCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7134D7A1DF54C92005B600C /* CYCommentViewController.xib */; };
 		E7134D7F1DF555B6005B600C /* CYCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7134D7E1DF555B6005B600C /* CYCommentHeaderView.m */; };
@@ -74,9 +77,21 @@
 		E7A3B4481D227B3D0033A37C /* VoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A3B4471D227B3D0033A37C /* VoiceView.xib */; };
 		E7A3B44C1D227EC50033A37C /* ShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A3B44A1D227EC50033A37C /* ShowPictureViewController.m */; };
 		E7A3B44D1D227EC50033A37C /* ShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A3B44B1D227EC50033A37C /* ShowPictureViewController.xib */; };
+		E7BF22381DF9033500B3686C /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = E7BF22371DF9033500B3686C /* delete.png */; };
+		E7BF22411DF9042500B3686C /* CYOtherTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BF223F1DF9042500B3686C /* CYOtherTableViewController.m */; };
+		E7BF22421DF9042500B3686C /* CYOtherTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7BF22401DF9042500B3686C /* CYOtherTableViewController.xib */; };
+		E7BF22491DF906A100B3686C /* CYTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BF22471DF906A100B3686C /* CYTextViewController.m */; };
+		E7BF224A1DF906A100B3686C /* CYTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7BF22481DF906A100B3686C /* CYTextViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E70C02D11DF8137B008E5C2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E797CFA91CD62B1E0089F3EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E70C02C71DF8137B008E5C2B;
+			remoteInfo = ActionExtension;
+		};
 		E797CFCB1CD62B1E0089F3EB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E797CFA91CD62B1E0089F3EB /* Project object */;
@@ -85,6 +100,20 @@
 			remoteInfo = CYBudejie;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E70C02D71DF8137B008E5C2B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E70C02D31DF8137B008E5C2B /* ActionExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0B64BBB4EFD16AC4E000AF3E /* Pods-CYBudejie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYBudejie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CYBudejie/Pods-CYBudejie.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +141,11 @@
 		E70543F51DF5408D00441036 /* CYComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYComment.m; sourceTree = "<group>"; };
 		E70C02951DF7BE9E008E5C2B /* CYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYConst.h; sourceTree = "<group>"; };
 		E70C02961DF7BE9E008E5C2B /* CYConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYConst.m; sourceTree = "<group>"; };
+		E70C02C81DF8137B008E5C2B /* ActionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ActionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E70C02CA1DF8137B008E5C2B /* ActionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionViewController.h; sourceTree = "<group>"; };
+		E70C02CB1DF8137B008E5C2B /* ActionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionViewController.m; sourceTree = "<group>"; };
+		E70C02CE1DF8137B008E5C2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		E70C02D01DF8137B008E5C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7134D781DF54C92005B600C /* CYCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYCommentViewController.h; sourceTree = "<group>"; };
 		E7134D791DF54C92005B600C /* CYCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYCommentViewController.m; sourceTree = "<group>"; };
 		E7134D7A1DF54C92005B600C /* CYCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYCommentViewController.xib; sourceTree = "<group>"; };
@@ -211,9 +245,23 @@
 		E7A3B4491D227EC50033A37C /* ShowPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowPictureViewController.h; sourceTree = "<group>"; };
 		E7A3B44A1D227EC50033A37C /* ShowPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowPictureViewController.m; sourceTree = "<group>"; };
 		E7A3B44B1D227EC50033A37C /* ShowPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowPictureViewController.xib; sourceTree = "<group>"; };
+		E7BF22371DF9033500B3686C /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		E7BF223E1DF9042500B3686C /* CYOtherTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYOtherTableViewController.h; sourceTree = "<group>"; };
+		E7BF223F1DF9042500B3686C /* CYOtherTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYOtherTableViewController.m; sourceTree = "<group>"; };
+		E7BF22401DF9042500B3686C /* CYOtherTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYOtherTableViewController.xib; sourceTree = "<group>"; };
+		E7BF22461DF906A100B3686C /* CYTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYTextViewController.h; sourceTree = "<group>"; };
+		E7BF22471DF906A100B3686C /* CYTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYTextViewController.m; sourceTree = "<group>"; };
+		E7BF22481DF906A100B3686C /* CYTextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYTextViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E70C02C51DF8137B008E5C2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E797CFAE1CD62B1E0089F3EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,11 +325,23 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		E70C02C91DF8137B008E5C2B /* ActionExtension */ = {
+			isa = PBXGroup;
+			children = (
+				E70C02CA1DF8137B008E5C2B /* ActionViewController.h */,
+				E70C02CB1DF8137B008E5C2B /* ActionViewController.m */,
+				E70C02CD1DF8137B008E5C2B /* MainInterface.storyboard */,
+				E70C02D01DF8137B008E5C2B /* Info.plist */,
+			);
+			path = ActionExtension;
+			sourceTree = "<group>";
+		};
 		E797CFA81CD62B1E0089F3EB = {
 			isa = PBXGroup;
 			children = (
 				E797CFB31CD62B1E0089F3EB /* CYBudejie */,
 				E797CFCD1CD62B1E0089F3EB /* CYBudejieUITests */,
+				E70C02C91DF8137B008E5C2B /* ActionExtension */,
 				E797CFB21CD62B1E0089F3EB /* Products */,
 				179FA21302CCB17606EBA0B6 /* Pods */,
 				B4B708A75C1C34F2BC6ED4F2 /* Frameworks */,
@@ -293,6 +353,7 @@
 			children = (
 				E797CFB11CD62B1E0089F3EB /* CYBudejie.app */,
 				E797CFCA1CD62B1E0089F3EB /* CYBudejieUITests.xctest */,
+				E70C02C81DF8137B008E5C2B /* ActionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -309,6 +370,7 @@
 		E797CFB41CD62B1E0089F3EB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E7BF22371DF9033500B3686C /* delete.png */,
 				E797CFC01CD62B1E0089F3EB /* Assets.xcassets */,
 				E797CFC51CD62B1E0089F3EB /* Info.plist */,
 			);
@@ -327,12 +389,12 @@
 		E797CFDA1CD634970089F3EB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E797CFEF1CD634970089F3EB /* Other */,
+				E797CFE51CD634970089F3EB /* Main */,
 				E797CFDB1CD634970089F3EB /* Essence */,
 				E797CFE01CD634970089F3EB /* FriendTrends */,
-				E797CFE51CD634970089F3EB /* Main */,
 				E797CFEB1CD634970089F3EB /* Me */,
 				E797CFED1CD634970089F3EB /* New */,
-				E797CFEF1CD634970089F3EB /* Other */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -575,6 +637,12 @@
 				E797D0061CD6377A0089F3EB /* MeViewController.m */,
 				E7A1936E1CD7BBEA003DE880 /* SettingViewController.h */,
 				E7A1936F1CD7BBEA003DE880 /* SettingViewController.m */,
+				E7BF223E1DF9042500B3686C /* CYOtherTableViewController.h */,
+				E7BF223F1DF9042500B3686C /* CYOtherTableViewController.m */,
+				E7BF22401DF9042500B3686C /* CYOtherTableViewController.xib */,
+				E7BF22461DF906A100B3686C /* CYTextViewController.h */,
+				E7BF22471DF906A100B3686C /* CYTextViewController.m */,
+				E7BF22481DF906A100B3686C /* CYTextViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -613,6 +681,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E70C02C71DF8137B008E5C2B /* ActionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E70C02D61DF8137B008E5C2B /* Build configuration list for PBXNativeTarget "ActionExtension" */;
+			buildPhases = (
+				E70C02C41DF8137B008E5C2B /* Sources */,
+				E70C02C51DF8137B008E5C2B /* Frameworks */,
+				E70C02C61DF8137B008E5C2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ActionExtension;
+			productName = ActionExtension;
+			productReference = E70C02C81DF8137B008E5C2B /* ActionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		E797CFB01CD62B1E0089F3EB /* CYBudejie */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E797CFD31CD62B1E0089F3EB /* Build configuration list for PBXNativeTarget "CYBudejie" */;
@@ -623,10 +708,12 @@
 				E797CFAF1CD62B1E0089F3EB /* Resources */,
 				4C42D2473FC47447C759044E /* [CP] Embed Pods Frameworks */,
 				9A972829C7B7C6399EF3CDCF /* [CP] Copy Pods Resources */,
+				E70C02D71DF8137B008E5C2B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E70C02D21DF8137B008E5C2B /* PBXTargetDependency */,
 			);
 			name = CYBudejie;
 			productName = CYBudejie;
@@ -661,6 +748,11 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Cyrill;
 				TargetAttributes = {
+					E70C02C71DF8137B008E5C2B = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 7ENE4DHQ7N;
+						ProvisioningStyle = Automatic;
+					};
 					E797CFB01CD62B1E0089F3EB = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 7ENE4DHQ7N;
@@ -686,11 +778,20 @@
 			targets = (
 				E797CFB01CD62B1E0089F3EB /* CYBudejie */,
 				E797CFC91CD62B1E0089F3EB /* CYBudejieUITests */,
+				E70C02C71DF8137B008E5C2B /* ActionExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E70C02C61DF8137B008E5C2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E70C02CF1DF8137B008E5C2B /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E797CFAF1CD62B1E0089F3EB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -698,10 +799,13 @@
 				E7A3B4461D227B310033A37C /* VideoView.xib in Resources */,
 				E7A192401CD6F9C2003DE880 /* FriendTrendsViewController.xib in Resources */,
 				E70164421D23BD840020541E /* LoginViewController.xib in Resources */,
+				E7BF22381DF9033500B3686C /* delete.png in Resources */,
+				E7BF22421DF9042500B3686C /* CYOtherTableViewController.xib in Resources */,
 				E797CFC11CD62B1E0089F3EB /* Assets.xcassets in Resources */,
 				E77664671CDDE27C0054A5F9 /* RecommendCategoryCell.xib in Resources */,
 				E7A3B44D1D227EC50033A37C /* ShowPictureViewController.xib in Resources */,
 				E776646C1CDDE2910054A5F9 /* RecommendUserCell.xib in Resources */,
+				E7BF224A1DF906A100B3686C /* CYTextViewController.xib in Resources */,
 				E7A192451CD6FBC4003DE880 /* RecommendViewController.xib in Resources */,
 				E7A3B4481D227B3D0033A37C /* VoiceView.xib in Resources */,
 				E7134D841DF55799005B600C /* CYCommentCell.xib in Resources */,
@@ -770,6 +874,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E70C02C41DF8137B008E5C2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E70C02CC1DF8137B008E5C2B /* ActionViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E797CFAD1CD62B1E0089F3EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -814,6 +926,8 @@
 				E797D0071CD6377A0089F3EB /* MeViewController.m in Sources */,
 				E797D00D1CD63B5A0089F3EB /* UIBarButtonItem+CYExtension.m in Sources */,
 				E7A3B4411D227B180033A37C /* VideoView.m in Sources */,
+				E7BF22411DF9042500B3686C /* CYOtherTableViewController.m in Sources */,
+				E7BF22491DF906A100B3686C /* CYTextViewController.m in Sources */,
 				E7A3B4191D225D550033A37C /* Theme.m in Sources */,
 				E797CFF41CD634970089F3EB /* AppDelegate.m in Sources */,
 				E70164451D23BEF70020541E /* CYTextField.m in Sources */,
@@ -839,6 +953,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E70C02D21DF8137B008E5C2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E70C02C71DF8137B008E5C2B /* ActionExtension */;
+			targetProxy = E70C02D11DF8137B008E5C2B /* PBXContainerItemProxy */;
+		};
 		E797CFCC1CD62B1E0089F3EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E797CFB01CD62B1E0089F3EB /* CYBudejie */;
@@ -846,7 +965,48 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		E70C02CD1DF8137B008E5C2B /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E70C02CE1DF8137B008E5C2B /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		E70C02D41DF8137B008E5C2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = 7ENE4DHQ7N;
+				INFOPLIST_FILE = ActionExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Futurestar.CYBudejie.ActionExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E70C02D51DF8137B008E5C2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = 7ENE4DHQ7N;
+				INFOPLIST_FILE = ActionExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Futurestar.CYBudejie.ActionExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		E797CFD11CD62B1E0089F3EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -994,6 +1154,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E70C02D61DF8137B008E5C2B /* Build configuration list for PBXNativeTarget "ActionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E70C02D41DF8137B008E5C2B /* Debug */,
+				E70C02D51DF8137B008E5C2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E797CFAC1CD62B1E0089F3EB /* Build configuration list for PBXProject "CYBudejie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
