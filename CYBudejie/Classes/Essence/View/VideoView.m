@@ -16,6 +16,18 @@
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
 }
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    self.imageView.userInteractionEnabled = YES;
+    // 给图片添加监听器
+    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showVideo)]];
+}
+
+- (void)showVideo {
+    
+}
+
 - (void)setTopic:(Topic *)topic
 {
     [super setTopic:topic];

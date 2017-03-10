@@ -82,6 +82,8 @@
 		E7BF22421DF9042500B3686C /* CYOtherTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7BF22401DF9042500B3686C /* CYOtherTableViewController.xib */; };
 		E7BF22491DF906A100B3686C /* CYTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BF22471DF906A100B3686C /* CYTextViewController.m */; };
 		E7BF224A1DF906A100B3686C /* CYTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7BF22481DF906A100B3686C /* CYTextViewController.xib */; };
+		E7D1BED91E72C67F00BCFDA4 /* ShowVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D1BED71E72C67F00BCFDA4 /* ShowVideoViewController.m */; };
+		E7D1BEDA1E72C67F00BCFDA4 /* ShowVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7D1BED81E72C67F00BCFDA4 /* ShowVideoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,6 +254,9 @@
 		E7BF22461DF906A100B3686C /* CYTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYTextViewController.h; sourceTree = "<group>"; };
 		E7BF22471DF906A100B3686C /* CYTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYTextViewController.m; sourceTree = "<group>"; };
 		E7BF22481DF906A100B3686C /* CYTextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYTextViewController.xib; sourceTree = "<group>"; };
+		E7D1BED61E72C67F00BCFDA4 /* ShowVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowVideoViewController.h; sourceTree = "<group>"; };
+		E7D1BED71E72C67F00BCFDA4 /* ShowVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowVideoViewController.m; sourceTree = "<group>"; };
+		E7D1BED81E72C67F00BCFDA4 /* ShowVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowVideoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -420,6 +425,9 @@
 				E7A3B4491D227EC50033A37C /* ShowPictureViewController.h */,
 				E7A3B44A1D227EC50033A37C /* ShowPictureViewController.m */,
 				E7A3B44B1D227EC50033A37C /* ShowPictureViewController.xib */,
+				E7D1BED61E72C67F00BCFDA4 /* ShowVideoViewController.h */,
+				E7D1BED71E72C67F00BCFDA4 /* ShowVideoViewController.m */,
+				E7D1BED81E72C67F00BCFDA4 /* ShowVideoViewController.xib */,
 				E7134D781DF54C92005B600C /* CYCommentViewController.h */,
 				E7134D791DF54C92005B600C /* CYCommentViewController.m */,
 				E7134D7A1DF54C92005B600C /* CYCommentViewController.xib */,
@@ -813,6 +821,7 @@
 				E7A3B4301D2266D30033A37C /* TopicCell.xib in Resources */,
 				E705437B1DF0337200441036 /* CYPublishView.xib in Resources */,
 				E7A3B4381D2278690033A37C /* PictureView.xib in Resources */,
+				E7D1BEDA1E72C67F00BCFDA4 /* ShowVideoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -905,6 +914,7 @@
 				E7A192441CD6FBC4003DE880 /* RecommendViewController.m in Sources */,
 				E7A3B42F1D2266D30033A37C /* TopicCell.m in Sources */,
 				E7A3B4441D227B240033A37C /* VoiceView.m in Sources */,
+				E7D1BED91E72C67F00BCFDA4 /* ShowVideoViewController.m in Sources */,
 				E70164481D23BFFA0020541E /* CYVerticalButton.m in Sources */,
 				E7A3B4161D225D4D0033A37C /* TopicFrame.m in Sources */,
 				E797D0161CD6F3120089F3EB /* CYHTTPTool.m in Sources */,
