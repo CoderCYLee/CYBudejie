@@ -56,9 +56,9 @@
 }
 
 - (void)addNotifi {
-    //    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-    //    [notificationCenter addObserver:self selector:@selector(mediaPlayerPlaybackStateChange:) name:MPMoviePlayerPlaybackStateDidChangeNotification object:self.movie];
-    //    [notificationCenter addObserver:self selector:@selector(mediaPlayerPlaybackFinished:) name:MPMoviePlayerPlaybackDidFinishNotification object:self.movie];
+        NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+        [notificationCenter addObserver:self selector:@selector(mediaPlayerPlaybackStateChange:) name:MPMoviePlayerPlaybackStateDidChangeNotification object:self.movie];
+        [notificationCenter addObserver:self selector:@selector(mediaPlayerPlaybackFinished:) name:MPMoviePlayerPlaybackDidFinishNotification object:self.movie];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(movieFinishedCallback:) name:MPMoviePlayerPlaybackDidFinishNotification object:self.movie];
 }
@@ -125,6 +125,7 @@
     if (!_movie) {
         NSURL *url = [self getNetworkUrl];
         _movie = [[MPMoviePlayerController alloc] initWithContentURL:url];
+        
         _movie.view.frame = CGRectMake(0, 64, kScreenW, kScreenH - 64);
         [self.view addSubview:_movie.view];
     }
