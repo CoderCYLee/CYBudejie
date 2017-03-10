@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class Topic;
+
 @interface ShowVideoViewController : UIViewController
+
+/**
+ *  模型数据
+ */
+@property (nonatomic, strong) Topic *topic;
 
 @end

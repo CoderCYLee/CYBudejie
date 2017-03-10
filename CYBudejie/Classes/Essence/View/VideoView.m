@@ -8,6 +8,7 @@
 
 #import "VideoView.h"
 #import "Topic.h"
+#import "ShowVideoViewController.h"
 
 @implementation VideoView
 
@@ -25,7 +26,9 @@
 }
 
 - (void)showVideo {
-    
+    ShowVideoViewController *showVideo = [[ShowVideoViewController alloc] init];
+    showVideo.topic = self.topic;
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:showVideo animated:YES completion:nil];
 }
 
 - (void)setTopic:(Topic *)topic
