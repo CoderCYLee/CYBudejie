@@ -30,8 +30,7 @@
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     
-    [self.movie stop];
-    self.movie = nil;
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -46,7 +45,7 @@
 }
 
 - (IBAction)back {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self toBack];
 }
 
 
@@ -98,7 +97,13 @@
     MPMoviePlayerController *theMovie = [notify object];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:theMovie];
     
+    [self toBack];
+}
+
+- (void)toBack {
+    [self.movie stop];
     [self dismissViewControllerAnimated:YES completion:nil];
+    self.movie = nil;
 }
 
 /**
